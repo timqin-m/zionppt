@@ -38,7 +38,7 @@
 .slide[data-accent="core"]{--accent:var(--m-blue);--accent-soft:var(--m-blue-light);--accent-deep:var(--m-blue-dark)}
 
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{font-family:var(--font-ui);color:var(--ink);font-weight:400;-webkit-font-smoothing:antialiased}
+html,body{font-family:var(--font-ui);color:var(--ink);font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body{
   background:var(--white);
   background-image:radial-gradient(circle at 1px 1px, rgba(0,0,0,.06) 1px, transparent 0);
@@ -288,7 +288,6 @@ body.present .present-hud{display:block}
 
 @media (max-width:1340px){
   body{padding:32px 0}
-  body:not(.present) .deck{transform:scale(.7);transform-origin:top center;width:1280px}
   body:not(.present) .hint{display:none}
 }
 

@@ -22,6 +22,25 @@ export default function Deck() {
   const deckRef = useRef(null);
   const [present, setPresent] = useState(false);
   const [currentIdx, setCurrentIdx] = useState(0);
+  const [scrollScale, setScrollScale] = useState(1);
+
+  // 滚动模式下的自适应缩放（针对移动端和窄屏，计算出完美比例）
+  useEffect(() => {
+    if (present) return;
+    const handleResize = () => {
+      const width = window.innerWidth;
+      const targetWidth = 1312; // 1280px + 32px 左右边距
+      if (width < targetWidth) {
+        setScrollScale(width / targetWidth);
+      } else {
+        setScrollScale(1);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => window.removeEventListener('resize', handleResize);
+  }, [present]);
+
   const currentIdxRef = useRef(0);
   const presentRef = useRef(false);
   currentIdxRef.current = currentIdx;
@@ -176,10 +195,29 @@ export default function Deck() {
       <div className="toolbar">
         <button type="button" onClick={enterPresent}>⛶ 演讲模式</button>
       </div>
-      <div className="deck" ref={deckRef}>
-        {DECK.map(({ id, Comp }, idx) => (
-          <Comp key={id} active={currentIdx === idx} />
-        ))}
+      <div 
+        className="deck-wrapper"
+        style={present ? {} : {
+          width: '100%',
+          height: `${(total * 752 - 32) * scrollScale}px`,
+          overflow: 'hidden',
+          position: 'relative'
+        }}
+      >
+        <div 
+          className="deck" 
+          ref={deckRef}
+          style={present ? {} : {
+            transform: `scale(${scrollScale})`,
+            transformOrigin: 'top center',
+            width: '1280px',
+            margin: '0 auto'
+          }}
+        >
+          {DECK.map(({ id, Comp }, idx) => (
+            <Comp key={id} active={currentIdx === idx} />
+          ))}
+        </div>
       </div>
       <div className="present-hud">
         <span>SLIDE</span>
