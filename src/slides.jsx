@@ -11,7 +11,7 @@ export function Slide_s01() {
     <div className="corner-mark-bl"></div>
     <div className="cover-body">
       <div className="cover-tag">
-        <span className="badge">黑客松 · 2026</span>
+        <span className="badge">Zion BaaS</span>
         <span>Zion Plugin 极速开发指南</span>
       </div>
       <div>
@@ -130,7 +130,7 @@ export function Slide_s04() {
           </div>
           <div style={{"display":"flex","alignItems":"flex-start","gap":"8px"}}>
             <span style={{"color":"var(--m-flam-dark)","fontWeight":"bold","fontSize":"16px"}}>✦</span>
-            <div>导致选手<strong>根本没时间深入思考 Idea 与打磨产品核心创意</strong>，光是急着把代码赶出来、在红字中 Debug 改报错就消耗了全部精力。</div>
+            <div>导致开发者<strong>根本没时间深入思考 Idea 与打磨产品核心创意</strong>，光是急着把代码赶出来、在红字中 Debug 改报错就消耗了全部精力。</div>
           </div>
         </div>
       </div>
@@ -633,13 +633,13 @@ export function Slide_s05() {
       <div style={{"display":"flex","flexDirection":"column","justifyContent":"center","alignItems":"flex-start"}}>
         <span className="tag solid" style={{"background":"var(--accent-deep)","color":"var(--white)","fontWeight":"600","border":"0","fontSize":"12px","padding":"4px 10px","borderRadius":"4px","marginBottom":"16px"}}>拒绝到处「薅 Token 羊毛」</span>
         <h3 style={{"fontSize":"28px","fontWeight":"bold","color":"var(--accent-deep)","margin":"0","marginBottom":"14px","lineHeight":"1.2"}}>免去自备与配置 API Key</h3>
-        <p style={{"fontSize":"14.5px","color":"rgba(0,0,0,0.75)","lineHeight":"1.65","margin":"0"}}>在黑客松做 AI 创意，选手最头疼的就是<b>要对接 Gemini、GPT 以及各类国产模型（如 DeepSeek）时，需要到处去找、去注册账号、到处去薅免费 Token 羊毛和配置 API Key</b>。一到 Demo Day 路演现场，由于自备的免费额度超限或网络断供，极易导致产品在台上展示时当场当机崩溃！<br /><br />Zion Plugin 云端一站式提供了上述所有最新主流模型。一键下拉菜单即可在云端秒级自由切换，彻底消除多平台找 Key 与配置 SDK 的折磨！</p>
+        <p style={{"fontSize":"14.5px","color":"rgba(0,0,0,0.75)","lineHeight":"1.65","margin":"0"}}>在用 AI 构建产品时，开发者最头疼的就是<b>要对接 Gemini、GPT 以及各类国产模型（如 DeepSeek）时，需要到处去找、去注册账号、到处去薅免费 Token 羊毛和配置 API Key</b>。一到产品发布与演示现场，由于自备的免费额度超限或网络断供，极易导致产品当场崩溃！<br /><br />Zion Plugin 云端一站式提供了上述所有最新主流模型。一键下拉菜单即可在云端秒级自由切换，彻底消除多平台找 Key 与配置 SDK 的折磨！</p>
       </div>
       {/*  Right Column (Welfare Highlight Card)  */}
       <div className="card tinted" style={{"padding":"32px","borderRadius":"12px","display":"flex","flexDirection":"column","justifyContent":"center","borderLeft":"5px solid var(--accent)","borderTop":"0","borderBottom":"0","borderRight":"0"}}>
-        <div style={{"fontWeight":"bold","fontSize":"20px","marginBottom":"14px","color":"var(--accent-deep)"}}>🌟 AdventureX 选手专属全栈福利</div>
+        <div style={{"fontWeight":"bold","fontSize":"20px","marginBottom":"14px","color":"var(--accent-deep)"}}>🌟 开发者专属全栈资源</div>
         <div style={{"fontSize":"14px","color":"rgba(0,0,0,0.85)","marginBottom":"12px","fontWeight":"bold"}}>
-          所有参赛选手均可获得 <span className="accent">Zion 专业版</span> 及充足的 AI Points（基础额度）：
+          所有开发者均可获得 <span className="accent">Zion 专业版</span> 及充足的 AI Points（基础额度）：
         </div>
         <div style={{"display":"grid","gap":"12px","fontSize":"13.5px","color":"rgba(0,0,0,0.75)","lineHeight":"1.6"}}>
           <div>⚡ <strong>1. Gemini 系列模型（以 3.5 Flash 为例）：</strong><br />至少包含约 <span className="accent" style={{"fontWeight":"bold"}}>2000 万 Tokens</span> 输入 / <span className="accent" style={{"fontWeight":"bold"}}>330 万 Tokens</span> 输出！</div>
@@ -668,7 +668,7 @@ export function Slide_s05_2() {
       <div style={{"display":"flex","flexDirection":"column","justifyContent":"center","alignItems":"flex-start"}}>
         <span className="tag solid" style={{"background":"var(--accent-deep)","color":"var(--white)","fontWeight":"600","border":"0","fontSize":"12px","padding":"4px 10px","borderRadius":"4px","marginBottom":"16px"}}>全托管 Serverless 架构</span>
         <h3 style={{"fontSize":"28px","fontWeight":"bold","color":"var(--accent-deep)","margin":"0","marginBottom":"14px","lineHeight":"1.2"}}>真正的零运维物理托管</h3>
-        <p style={{"fontSize":"14.5px","color":"rgba(0,0,0,0.75)","lineHeight":"1.65","margin":"0"}}>不需要本地安装 Docker、配置端口映射，也不需要租用服务器自建 PostgreSQL 数据库。Zion 为你提供一整套在云端安全运行的全托管 Serverless 物理资源环境。<br /><br />自动生成高可用、极低延迟的标准云端数据接口，双端实时在线打通，让选手的精力 100% 专注于前端 UI 体验打磨与最核创意方案实现。</p>
+        <p style={{"fontSize":"14.5px","color":"rgba(0,0,0,0.75)","lineHeight":"1.65","margin":"0"}}>不需要本地安装 Docker、配置端口映射，也不需要租用服务器自建 PostgreSQL 数据库。Zion 为你提供一整套在云端安全运行的全托管 Serverless 物理资源环境。<br /><br />自动生成高可用、极低延迟的标准云端数据接口，双端实时在线打通，让你的精力 100% 专注于前端 UI 体验打磨与核心产品功能实现。</p>
       </div>
       {/*  Right Column (Welfare Highlight Card)  */}
       <div className="card tinted" style={{"padding":"32px","borderRadius":"12px","display":"flex","flexDirection":"column","justifyContent":"center","borderLeft":"5px solid var(--accent)","borderTop":"0","borderBottom":"0","borderRight":"0"}}>
@@ -879,9 +879,9 @@ export function Slide_s26() {
     <div style={{"display":"grid","gridTemplateColumns":"1.2fr 1fr","gap":"48px","flex":"1","alignContent":"center","alignItems":"center","width":"100%"}}>
       {/*  Left Column  */}
       <div style={{"display":"flex","flexDirection":"column","justifyContent":"center","alignItems":"flex-start"}}>
-        <h1 style={{"fontSize":"56px","marginBottom":"20px","lineHeight":"1.2"}}>祝你在黑客松中<br /><span className="accent">脱颖而出！</span></h1>
+        <h1 style={{"fontSize":"56px","marginBottom":"20px","lineHeight":"1.2"}}>极速打造你的<br /><span className="accent">爆款 AI 产品！</span></h1>
         <div style={{"fontSize":"15px","color":"var(--accent-deep)","fontWeight":"600","background":"rgba(21,152,255,0.05)","border":"1px dashed var(--accent)","borderRadius":"6px","padding":"12px 18px","marginBottom":"28px","width":"100%","maxWidth":"540px"}}>
-          获取 Zion 黑客松版本福利，请联系官方人员获取版本兑换码
+          获取 Zion 专业版资源，请联系官方人员获取兑换码
         </div>
         <div>
           <a className="btn-link sm" href="https://functorz.com" target="_blank" rel="noopener">functorz.com ➔</a>
