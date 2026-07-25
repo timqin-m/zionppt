@@ -161,27 +161,27 @@ export function Slide_s01_about({ active }) {
         {/* 动态大数字面板 */}
         <div className="grid-3 about-stats-grid" style={{ width: '100%', gap: '28px' }}>
           <div className="stat-card stat-card-1">
-            <div className="stat-label">创作者与开发者</div>
+            <div className="stat-label">注册用户</div>
             <div className="num-hero stat-num">
               {counts.users}<span className="stat-unit">w+</span>
             </div>
-            <div className="stat-desc">注册并持续使用 Zion</div>
+            <div className="stat-desc">注册用户</div>
           </div>
 
           <div className="stat-card stat-card-2">
-            <div className="stat-label">真实在线商业项目</div>
+            <div className="stat-label">上线项目</div>
             <div className="num-hero stat-num">
               {counts.projects}<span className="stat-unit">+</span>
             </div>
-            <div className="stat-desc">已公开发布并持续交付</div>
+            <div className="stat-desc">真实上线项目</div>
           </div>
 
           <div className="stat-card stat-card-3">
-            <div className="stat-label">C 端终端用户</div>
+            <div className="stat-label">终端用户</div>
             <div className="num-hero stat-num">
               {counts.endUsers}<span className="stat-unit">w+</span>
             </div>
-            <div className="stat-desc">云端数据库高并发承载</div>
+            <div className="stat-desc">用户的用户</div>
           </div>
         </div>
       </div>
