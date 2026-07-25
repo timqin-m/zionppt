@@ -213,7 +213,7 @@ export function Slide_s04() {
 <section className="slide" id="s04" data-accent="spark">
     <div className="signature">✦ @functorz.com</div>
     <div className="slide-head">
-      <div className="kicker"><span className="pill">INTRO</span><span>HACKATHON PAIN POINTS</span></div>
+      <div className="kicker"><span className="pill">INTRO</span><span>VIBE CODING PAIN POINTS</span></div>
     </div>
     <h2 style={{"fontSize":"32px","marginBottom":"24px"}}>被 Vibe coding <span className="accent">后端绊住的用户...</span></h2>
     
