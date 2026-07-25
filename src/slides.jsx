@@ -107,9 +107,9 @@ export function Slide_s01() {
   );
 }
 
-export function Slide_s01_zion() {
+export function Slide_s01_about() {
   return (
-    <section className="slide" id="s01_zion" data-accent="core">
+    <section className="slide" id="s01_about" data-accent="core">
       <div className="signature">✦ @functorz.com</div>
       <div className="slide-head" style={{ marginBottom: '16px' }}>
         <div className="kicker">
@@ -118,50 +118,105 @@ export function Slide_s01_zion() {
         </div>
       </div>
       <h2 style={{ fontSize: '38px', fontWeight: '700', marginBottom: '8px', lineHeight: '1.2' }}>
-        关于 Zion：<span className="accent">从无代码时代 到 Vibe Coding 时代</span>
+        关于 Zion：<span className="accent">在过去的 6 年里，我们只死磕了一件事</span>
       </h2>
-      <p className="muted" style={{ fontSize: '15px', marginBottom: '20px' }}>
-        在过去的 6 年里，我们只死磕了一件事：帮助没有技术背景的创业者，通过 Zion 可视化编辑器自主开发并交付微信小程序与 Web 站点。
+      <p className="muted" style={{ fontSize: '16px', marginBottom: '24px' }}>
+        让没有技术背景的创业者，通过 Zion 可视化编辑器自主开发并交付微信小程序、网站与 Web 应用。
+      </p>
+
+      <div className="grid-3" style={{ flex: 1, gap: '24px', alignItems: 'stretch' }}>
+        <div className="card tinted" style={{ padding: '28px 24px', borderRadius: '12px', display: 'flex', flexDirection: 'column', borderTop: '4px solid var(--m-blue)' }}>
+          <div className="tag solid" style={{ background: 'var(--m-blue-dark)', color: '#fff', fontSize: '11px', padding: '3px 8px', borderRadius: '3px', marginBottom: '16px', alignSelf: 'flex-start' }}>
+            01 / 高并发与高可用
+          </div>
+          <h3 style={{ fontSize: '20px', fontWeight: '700', color: 'var(--m-blue-dark)', marginBottom: '12px' }}>
+            云端数据库与 Serverless 架构
+          </h3>
+          <p style={{ fontSize: '14px', lineHeight: '1.7', color: 'rgba(0,0,0,0.75)' }}>
+            内置生产级关系型数据库 PostgreSQL，具备百万级数据承载与高并发稳定响应能力，免去服务器搭建运维。
+          </p>
+        </div>
+
+        <div className="card tinted" style={{ padding: '28px 24px', borderRadius: '12px', display: 'flex', flexDirection: 'column', borderTop: '4px solid var(--m-blue)' }}>
+          <div className="tag solid" style={{ background: 'var(--m-blue-dark)', color: '#fff', fontSize: '11px', padding: '3px 8px', borderRadius: '3px', marginBottom: '16px', alignSelf: 'flex-start' }}>
+            02 / 业务逻辑严谨性
+          </div>
+          <h3 style={{ fontSize: '20px', fontWeight: '700', color: 'var(--m-blue-dark)', marginBottom: '12px' }}>
+            可视化行为流与细粒度权限
+          </h3>
+          <p style={{ fontSize: '14px', lineHeight: '1.7', color: 'rgba(0,0,0,0.75)' }}>
+            通过严谨的可视化行为流编排复杂后端逻辑、API 联动与角色权限校验，确保商业级应用的数据安全与稳定。
+          </p>
+        </div>
+
+        <div className="card tinted" style={{ padding: '28px 24px', borderRadius: '12px', display: 'flex', flexDirection: 'column', borderTop: '4px solid var(--m-blue)' }}>
+          <div className="tag solid" style={{ background: 'var(--m-blue-dark)', color: '#fff', fontSize: '11px', padding: '3px 8px', borderRadius: '3px', marginBottom: '16px', alignSelf: 'flex-start' }}>
+            03 / 数万商用项目检验
+          </div>
+          <h3 style={{ fontSize: '20px', fontWeight: '700', color: 'var(--m-blue-dark)', marginBottom: '12px' }}>
+            助力创作者无门槛构建交付
+          </h3>
+          <p style={{ fontSize: '14px', lineHeight: '1.7', color: 'rgba(0,0,0,0.75)' }}>
+            6 年时间已累计服务数万名非技术背景创业者与产品创作者，成功上线并稳定运行大量商业化数字产品。
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function Slide_s01_vibe() {
+  return (
+    <section className="slide" id="s01_vibe" data-accent="spark">
+      <div className="signature">✦ @functorz.com</div>
+      <div className="slide-head" style={{ marginBottom: '16px' }}>
+        <div className="kicker">
+          <span className="pill accent">ERA TRANSITION</span>
+          <span>THE RISE OF VIBE CODING</span>
+        </div>
+      </div>
+      <h2 style={{ fontSize: '38px', fontWeight: '700', marginBottom: '8px', lineHeight: '1.2' }}>
+        进入 Vibe Coding 时代：<span className="accent">越来越多的人，愿意向前迈出一步</span>
+      </h2>
+      <p className="muted" style={{ fontSize: '16px', marginBottom: '24px' }}>
+        当大模型具备强悍的 UI 代码生成能力，创作者们开始通过 Vibe Coding 自自主写代码构建产品前端。
       </p>
 
       <div className="grid-2" style={{ flex: 1, gap: '28px', alignItems: 'stretch' }}>
-        {/* 左卡片：6年死磕的坚实基座 */}
-        <div className="card tinted" style={{ padding: '28px', borderRadius: '12px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderLeft: '4px solid var(--m-blue)' }}>
+        {/* 左卡片：前端向 AI 靠拢 */}
+        <div className="card" style={{ padding: '28px', borderRadius: '12px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', border: '1px solid var(--hairline)', background: 'var(--white)' }}>
           <div>
-            <div className="tag solid" style={{ background: 'var(--m-blue-dark)', color: '#fff', fontSize: '11px', padding: '3px 8px', borderRadius: '3px', marginBottom: '14px' }}>
-              ZION 坚实基座 (2019 - 2025)
+            <div className="tag" style={{ fontSize: '11px', padding: '3px 8px', borderRadius: '3px', marginBottom: '14px' }}>
+              ✦ 前端变革 · AI 代码助手普及
             </div>
-            <h3 style={{ fontSize: '22px', fontWeight: '700', color: 'var(--m-blue-dark)', marginBottom: '14px' }}>
-              死磕云端服务稳定性与严谨性
+            <h3 style={{ fontSize: '22px', fontWeight: '700', marginBottom: '14px' }}>
+              用自然语言打造极致前端 UI
             </h3>
-            <div style={{ fontSize: '14px', lineHeight: '1.7', color: 'rgba(0,0,0,0.8)', display: 'grid', gap: '10px' }}>
-              <div>• ⚡ <strong>高并发与高可用：</strong>沉淀高并发关系型数据库（PostgreSQL）与 Serverless 运行环境。</div>
-              <div>• 🔒 <strong>业务逻辑严谨性：</strong>支持可视化行为流编排、高细粒度权限控制与多端数据打通。</div>
-              <div>• 💼 <strong>无门槛构建交付：</strong>已助力数万非技术创业者无代码直出商业级应用。</div>
+            <div style={{ fontSize: '14.5px', lineHeight: '1.7', color: 'rgba(0,0,0,0.8)', display: 'grid', gap: '10px' }}>
+              <div>• 🤖 <strong>降低代码门槛：</strong>Cursor、Windsurf 等 IDE 让人人都可以成为前端开发者。</div>
+              <div>• 🎨 <strong>极致视觉体验：</strong>借助现代 UI 库与动效组件，创作者能够快速打磨出精美的用户界面。</div>
+              <div>• 🚧 <strong>面临的核心痛点：</strong>前端搞定了，但后端的云数据库、接口、鉴权与 AI Agent 配置依然是巨大阻碍。</div>
             </div>
-          </div>
-          <div style={{ background: 'rgba(21,152,255,0.08)', borderRadius: '8px', padding: '10px 14px', fontSize: '12.5px', color: 'var(--m-blue-dark)', fontWeight: '600' }}>
-            ✦ 可视化后端与企业级架构，历经数万真实商用项目检验
           </div>
         </div>
 
-        {/* 右卡片：Vibe Coding 时代的进化 */}
+        {/* 右卡片：Zion Plugin 应运而生 */}
         <div className="card tinted" style={{ padding: '28px', borderRadius: '12px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderLeft: '4px solid var(--m-lav)', background: 'var(--m-lav-light)' }}>
           <div>
             <div className="tag solid" style={{ background: 'var(--m-lav-dark)', color: '#fff', fontSize: '11px', padding: '3px 8px', borderRadius: '3px', marginBottom: '14px' }}>
-              NEW ERA · VIBE CODING
+              ⚡ Zion Plugin 应运而生
             </div>
             <h3 style={{ fontSize: '22px', fontWeight: '700', color: 'var(--m-lav-dark)', marginBottom: '14px' }}>
-              越来越多的人，愿意向前迈出一步
+              把 6 年积累的稳定后端，直接塞进 AI 插件
             </h3>
-            <div style={{ fontSize: '14px', lineHeight: '1.7', color: 'rgba(0,0,0,0.8)', display: 'grid', gap: '10px' }}>
-              <div>• 🚀 <strong>自然语言编程潮：</strong>在 Vibe Coding 时代，越来越多创作者选择用 AI 代码工具开发产品。</div>
-              <div>• ⚡ <strong>Zion Plugin 诞生：</strong>我们将 6 年积累的稳定云端后端，封装为一行指令即可接入的开发套件。</div>
-              <div>• 🤝 <strong>人机结对全栈交付：</strong>前端交给 AI Coding，后端交给 Zion，实现兼具极速与极稳的全栈开发。</div>
+            <div style={{ fontSize: '14.5px', lineHeight: '1.7', color: 'rgba(0,0,0,0.8)', display: 'grid', gap: '10px' }}>
+              <div>• 🔌 <strong>无缝接入 AI IDE：</strong>将 Zion 6 年沉淀的可视化云后端能力，封装为标准化 Agent Plugin。</div>
+              <div>• 🤝 <strong>完美的双剑合璧：</strong>前端交给 AI 代码助手生成，后端交给 Zion Plugin 云端自动全托管物化。</div>
+              <div>• 🚀 <strong>真项目直出：</strong>兼具 AI 编写前端的极高自由度，与 Zion 云端后端的极高稳定性。</div>
             </div>
           </div>
           <div style={{ background: 'rgba(92,77,244,0.1)', borderRadius: '8px', padding: '10px 14px', fontSize: '12.5px', color: 'var(--m-lav-dark)', fontWeight: '600' }}>
-            ➔ 时代向前：从“无代码编辑器”到“AI 时代的云端可视化后端”
+            ➔ 从“无代码图形编辑器”演进为“Vibe Coding 时代的云端可视化后端”
           </div>
         </div>
       </div>
@@ -963,7 +1018,8 @@ export function Slide_s26() {
 
 export const SLIDES = [
   { id: "s01", Comp: Slide_s01 },
-  { id: "s01_zion", Comp: Slide_s01_zion },
+  { id: "s01_about", Comp: Slide_s01_about },
+  { id: "s01_vibe", Comp: Slide_s01_vibe },
   { id: "s04", Comp: Slide_s04 },
   { id: "s01_intro", Comp: Slide_s01_intro },
   { id: "s01_agenda", Comp: Slide_s01_agenda },
