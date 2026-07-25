@@ -1,4 +1,5 @@
 // Auto-generated from zion-baas-hackathon-guide-slides.html — 幻灯片 markup 1:1 移植，勿手改
+import { useState, useEffect, useRef } from 'react';
 import { PerkImageLine, PerkVideoLine } from './PerkEffects.jsx';
 import { ScenarioCards } from './ScenarioCards.jsx';
 
@@ -107,41 +108,80 @@ export function Slide_s01() {
   );
 }
 
-export function Slide_s01_about() {
+export function Slide_s01_about({ active }) {
+  const [counts, setCounts] = useState({ users: 0, projects: 0, endUsers: 0 });
+  const animatedRef = useRef(false);
+
+  useEffect(() => {
+    if (!active) {
+      setCounts({ users: 0, projects: 0, endUsers: 0 });
+      animatedRef.current = false;
+      return undefined;
+    }
+
+    if (animatedRef.current) return undefined;
+    animatedRef.current = true;
+
+    const startTime = Date.now();
+    const duration = 1600; // 1.6 秒完成滚动
+
+    const timer = setInterval(() => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(1, elapsed / duration);
+      // Ease out cubic
+      const ease = 1 - Math.pow(1 - progress, 3);
+
+      setCounts({
+        users: Math.floor(ease * 30),
+        projects: Math.floor(ease * 8000),
+        endUsers: Math.floor(ease * 1000),
+      });
+
+      if (progress >= 1) {
+        clearInterval(timer);
+      }
+    }, 20);
+
+    return () => clearInterval(timer);
+  }, [active]);
+
   return (
-    <section className="slide" id="s01_about" data-accent="core" style={{ justifyContent: 'center', alignItems: 'center', textAlign: 'center', padding: '60px 80px' }}>
+    <section className={`slide ${active ? 'active-slide' : ''}`} id="s01_about" data-accent="core" style={{ justifyContent: 'center', alignItems: 'center', textAlign: 'center', padding: '60px 80px' }}>
       <div className="signature">✦ @functorz.com</div>
       
-      <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <h1 style={{ fontSize: '56px', fontWeight: '800', lineHeight: '1.2', letterSpacing: '-0.02em', marginBottom: '24px' }}>
+      <div style={{ maxWidth: '1020px', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <h1 className="about-title-anim" style={{ fontSize: '54px', fontWeight: '800', lineHeight: '1.2', letterSpacing: '-0.02em', marginBottom: '20px' }}>
           关于 Zion：<span className="accent">在过去的 6 年里，我们只死磕了一件事</span>
         </h1>
 
-        <p style={{ fontSize: '22px', color: 'var(--muted)', fontWeight: '300', lineHeight: '1.6', maxWidth: '820px', marginBottom: '56px' }}>
+        <p className="about-sub-anim" style={{ fontSize: '21px', color: 'var(--muted)', fontWeight: '300', lineHeight: '1.6', maxWidth: '840px', marginBottom: '52px' }}>
           让没有技术背景的创业者，通过 Zion 可视化编辑器自主开发并交付微信小程序、网站与 Web 应用。
         </p>
 
-        {/* 极简大数字横排展示 */}
-        <div className="grid-3" style={{ width: '100%', gap: '32px' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <div className="num-hero" style={{ fontSize: '64px', fontWeight: '800', color: 'var(--m-blue-dark)', lineHeight: '1' }}>
-              30w<span style={{ fontSize: '36px', color: 'var(--m-blue)' }}>+</span>
+        {/* 动态大数字面板 */}
+        <div className="grid-3 about-stats-grid" style={{ width: '100%', gap: '28px' }}>
+          <div className="stat-card stat-card-1">
+            <div className="stat-label">创作者与开发者</div>
+            <div className="num-hero stat-num">
+              {counts.users}<span className="stat-unit">w+</span>
             </div>
-            <div style={{ fontSize: '16px', color: 'var(--ink)', fontWeight: '600', marginTop: '12px' }}>注册创作者与开发者</div>
+            <div className="stat-desc">注册并持续使用 Zion</div>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <div className="num-hero" style={{ fontSize: '64px', fontWeight: '800', color: 'var(--m-lav-dark)', lineHeight: '1' }}>
-              8000<span style={{ fontSize: '36px', color: 'var(--m-lav)' }}>+</span>
+          <div className="stat-card stat-card-2">
+            <div className="stat-label">真实在线商业项目</div>
+            <div className="num-hero stat-num">
+              {counts.projects}<span className="stat-unit">+</span>
             </div>
-            <div style={{ fontSize: '16px', color: 'var(--ink)', fontWeight: '600', marginTop: '12px' }}>真实在线运营的商用项目</div>
+            <div className="stat-desc">已公开发布并持续交付</div>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <div className="num-hero" style={{ fontSize: '64px', fontWeight: '800', color: 'var(--m-flam-dark)', lineHeight: '1' }}>
-              1000w<span style={{ fontSize: '36px', color: 'var(--m-flam)' }}>+</span>
+          <div className="stat-card stat-card-3">
+            <div className="stat-label">C 端终端用户</div>
+            <div className="num-hero stat-num">
+              {counts.endUsers}<span className="stat-unit">w+</span>
             </div>
-            <div style={{ fontSize: '16px', color: 'var(--ink)', fontWeight: '600', marginTop: '12px' }}>服务终端 C 端用户</div>
+            <div className="stat-desc">云端数据库高并发承载</div>
           </div>
         </div>
       </div>
