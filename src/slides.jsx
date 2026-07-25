@@ -111,53 +111,62 @@ export function Slide_s01_about() {
   return (
     <section className="slide" id="s01_about" data-accent="core">
       <div className="signature">✦ @functorz.com</div>
-      <div className="slide-head" style={{ marginBottom: '16px' }}>
+      <div className="slide-head" style={{ marginBottom: '14px' }}>
         <div className="kicker">
           <span className="pill accent">COMPANY OVERVIEW</span>
           <span>ABOUT ZION · 6 YEARS</span>
         </div>
       </div>
-      <h2 style={{ fontSize: '38px', fontWeight: '700', marginBottom: '8px', lineHeight: '1.2' }}>
+      <h2 style={{ fontSize: '36px', fontWeight: '700', marginBottom: '6px', lineHeight: '1.2' }}>
         关于 Zion：<span className="accent">在过去的 6 年里，我们只死磕了一件事</span>
       </h2>
-      <p className="muted" style={{ fontSize: '16px', marginBottom: '24px' }}>
+      <p className="muted" style={{ fontSize: '15px', marginBottom: '20px' }}>
         让没有技术背景的创业者，通过 Zion 可视化编辑器自主开发并交付微信小程序、网站与 Web 应用。
       </p>
 
-      <div className="grid-3" style={{ flex: 1, gap: '24px', alignItems: 'stretch' }}>
-        <div className="card tinted" style={{ padding: '28px 24px', borderRadius: '12px', display: 'flex', flexDirection: 'column', borderTop: '4px solid var(--m-blue)' }}>
-          <div className="tag solid" style={{ background: 'var(--m-blue-dark)', color: '#fff', fontSize: '11px', padding: '3px 8px', borderRadius: '3px', marginBottom: '16px', alignSelf: 'flex-start' }}>
-            01 / 高并发与高可用
+      {/* 核心数据数字大卡片 */}
+      <div className="grid-3" style={{ marginBottom: '20px', gap: '20px' }}>
+        <div className="card" style={{ padding: '20px 24px', borderRadius: '12px', background: 'rgba(21,152,255,0.06)', border: '1px solid rgba(21,152,255,0.2)', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+          <div style={{ fontSize: '13px', fontWeight: '600', color: 'var(--muted)', letterSpacing: '0.05em' }}>创作者规模</div>
+          <div className="num-hero" style={{ fontSize: '44px', color: 'var(--m-blue-dark)', lineHeight: '1' }}>
+            30w<span style={{ fontSize: '28px', marginLeft: '2px' }}>+</span>
           </div>
-          <h3 style={{ fontSize: '20px', fontWeight: '700', color: 'var(--m-blue-dark)', marginBottom: '12px' }}>
-            云端数据库与 Serverless 架构
+          <div style={{ fontSize: '13px', color: 'rgba(0,0,0,0.75)', fontWeight: '500' }}>注册创作者与开发者</div>
+        </div>
+
+        <div className="card" style={{ padding: '20px 24px', borderRadius: '12px', background: 'rgba(92,77,244,0.06)', border: '1px solid rgba(92,77,244,0.2)', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+          <div style={{ fontSize: '13px', fontWeight: '600', color: 'var(--muted)', letterSpacing: '0.05em' }}>真实商业落地</div>
+          <div className="num-hero" style={{ fontSize: '44px', color: 'var(--m-lav-dark)', lineHeight: '1' }}>
+            8000<span style={{ fontSize: '28px', marginLeft: '2px' }}>+</span>
+          </div>
+          <div style={{ fontSize: '13px', color: 'rgba(0,0,0,0.75)', fontWeight: '500' }}>真实在线运营的商用项目</div>
+        </div>
+
+        <div className="card" style={{ padding: '20px 24px', borderRadius: '12px', background: 'rgba(255,121,156,0.06)', border: '1px solid rgba(255,121,156,0.2)', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+          <div style={{ fontSize: '13px', fontWeight: '600', color: 'var(--muted)', letterSpacing: '0.05em' }}>终端并发考验</div>
+          <div className="num-hero" style={{ fontSize: '44px', color: 'var(--m-flam-dark)', lineHeight: '1' }}>
+            1000w<span style={{ fontSize: '28px', marginLeft: '2px' }}>+</span>
+          </div>
+          <div style={{ fontSize: '13px', color: 'rgba(0,0,0,0.75)', fontWeight: '500' }}>支撑并服务 C 端终端用户</div>
+        </div>
+      </div>
+
+      <div className="grid-2" style={{ flex: 1, gap: '20px', alignItems: 'stretch' }}>
+        <div className="card tinted" style={{ padding: '20px 24px', borderRadius: '12px', display: 'flex', flexDirection: 'column', justifyContent: 'center', borderLeft: '4px solid var(--m-blue)' }}>
+          <h3 style={{ fontSize: '18px', fontWeight: '700', color: 'var(--m-blue-dark)', marginBottom: '8px' }}>
+            ⚡ 强悍的高并发与高可用服务
           </h3>
-          <p style={{ fontSize: '14px', lineHeight: '1.7', color: 'rgba(0,0,0,0.75)' }}>
-            内置生产级关系型数据库 PostgreSQL，具备百万级数据承载与高并发稳定响应能力，免去服务器搭建运维。
+          <p style={{ fontSize: '13.5px', lineHeight: '1.6', color: 'rgba(0,0,0,0.75)' }}>
+            内置生产级关系型数据库 PostgreSQL，具备百万级数据承载能力与 Serverless 弹性伸缩，免去云服务器运维折磨。
           </p>
         </div>
 
-        <div className="card tinted" style={{ padding: '28px 24px', borderRadius: '12px', display: 'flex', flexDirection: 'column', borderTop: '4px solid var(--m-blue)' }}>
-          <div className="tag solid" style={{ background: 'var(--m-blue-dark)', color: '#fff', fontSize: '11px', padding: '3px 8px', borderRadius: '3px', marginBottom: '16px', alignSelf: 'flex-start' }}>
-            02 / 业务逻辑严谨性
-          </div>
-          <h3 style={{ fontSize: '20px', fontWeight: '700', color: 'var(--m-blue-dark)', marginBottom: '12px' }}>
-            可视化行为流与细粒度权限
+        <div className="card tinted" style={{ padding: '20px 24px', borderRadius: '12px', display: 'flex', flexDirection: 'column', justifyContent: 'center', borderLeft: '4px solid var(--m-lav)', background: 'var(--m-lav-light)' }}>
+          <h3 style={{ fontSize: '18px', fontWeight: '700', color: 'var(--m-lav-dark)', marginBottom: '8px' }}>
+            🔒 严谨的可视化逻辑与数据安全
           </h3>
-          <p style={{ fontSize: '14px', lineHeight: '1.7', color: 'rgba(0,0,0,0.75)' }}>
-            通过严谨的可视化行为流编排复杂后端逻辑、API 联动与角色权限校验，确保商业级应用的数据安全与稳定。
-          </p>
-        </div>
-
-        <div className="card tinted" style={{ padding: '28px 24px', borderRadius: '12px', display: 'flex', flexDirection: 'column', borderTop: '4px solid var(--m-blue)' }}>
-          <div className="tag solid" style={{ background: 'var(--m-blue-dark)', color: '#fff', fontSize: '11px', padding: '3px 8px', borderRadius: '3px', marginBottom: '16px', alignSelf: 'flex-start' }}>
-            03 / 数万商用项目检验
-          </div>
-          <h3 style={{ fontSize: '20px', fontWeight: '700', color: 'var(--m-blue-dark)', marginBottom: '12px' }}>
-            助力创作者无门槛构建交付
-          </h3>
-          <p style={{ fontSize: '14px', lineHeight: '1.7', color: 'rgba(0,0,0,0.75)' }}>
-            6 年时间已累计服务数万名非技术背景创业者与产品创作者，成功上线并稳定运行大量商业化数字产品。
+          <p style={{ fontSize: '13.5px', lineHeight: '1.6', color: 'rgba(0,0,0,0.75)' }}>
+            通过严谨的可视化行为流编排后端逻辑、API 联动与角色权限校验，确保商业级应用在多场景下的数据安全与稳定。
           </p>
         </div>
       </div>
