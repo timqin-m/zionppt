@@ -177,9 +177,9 @@ export function Slide_s01_vibe() {
               用自然语言打造极致前端 UI
             </h3>
             <div style={{ fontSize: '14.5px', lineHeight: '1.7', color: 'rgba(0,0,0,0.8)', display: 'grid', gap: '10px' }}>
-              <div>• 🤖 <strong>降低代码门槛：</strong>Cursor、Windsurf 等 IDE 让人人都可以成为前端开发者。</div>
-              <div>• 🎨 <strong>极致视觉体验：</strong>借助现代 UI 库与动效组件，创作者能够快速打磨出精美的用户界面。</div>
-              <div>• 🚧 <strong>面临的核心痛点：</strong>前端搞定了，但后端的云数据库、接口、鉴权与 AI Agent 配置依然是巨大阻碍。</div>
+              <div>• <strong>降低代码门槛：</strong>Cursor、Windsurf 等 IDE 让人人都可以成为前端开发者。</div>
+              <div>• <strong>极致视觉体验：</strong>借助现代 UI 库与动效组件，创作者能够快速打磨出精美的用户界面。</div>
+              <div>• <strong>面临的核心痛点：</strong>前端搞定了，但后端的云数据库、接口、鉴权与 AI Agent 配置依然是巨大阻碍。</div>
             </div>
           </div>
         </div>
@@ -188,15 +188,15 @@ export function Slide_s01_vibe() {
         <div className="card tinted" style={{ padding: '28px', borderRadius: '12px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderLeft: '4px solid var(--m-lav)', background: 'var(--m-lav-light)' }}>
           <div>
             <div className="tag solid" style={{ background: 'var(--m-lav-dark)', color: '#fff', fontSize: '11px', padding: '3px 8px', borderRadius: '3px', marginBottom: '14px' }}>
-              ⚡ Zion Plugin 应运而生
+              Zion Plugin 应运而生
             </div>
             <h3 style={{ fontSize: '22px', fontWeight: '700', color: 'var(--m-lav-dark)', marginBottom: '14px' }}>
               把 6 年积累的稳定后端，直接塞进 AI 插件
             </h3>
             <div style={{ fontSize: '14.5px', lineHeight: '1.7', color: 'rgba(0,0,0,0.8)', display: 'grid', gap: '10px' }}>
-              <div>• 🔌 <strong>无缝接入 AI IDE：</strong>将 Zion 6 年沉淀的可视化云后端能力，封装为标准化 Agent Plugin。</div>
-              <div>• 🤝 <strong>完美的双剑合璧：</strong>前端交给 AI 代码助手生成，后端交给 Zion Plugin 云端自动全托管物化。</div>
-              <div>• 🚀 <strong>真项目直出：</strong>兼具 AI 编写前端的极高自由度，与 Zion 云端后端的极高稳定性。</div>
+              <div>• <strong>无缝接入 AI IDE：</strong>将 Zion 6 年沉淀的可视化云后端能力，封装为标准化 Agent Plugin。</div>
+              <div>• <strong>完美的双剑合璧：</strong>前端交给 AI 代码助手生成，后端交给 Zion Plugin 云端自动全托管物化。</div>
+              <div>• <strong>真项目直出：</strong>兼具 AI 编写前端的极高自由度，与 Zion 云端后端的极高稳定性。</div>
             </div>
           </div>
           <div style={{ background: 'rgba(92,77,244,0.1)', borderRadius: '8px', padding: '10px 14px', fontSize: '12.5px', color: 'var(--m-lav-dark)', fontWeight: '600' }}>
