@@ -111,17 +111,17 @@ export function Slide_s01_zion() {
   return (
     <section className="slide" id="s01_zion" data-accent="core">
       <div className="signature">✦ @functorz.com</div>
-      <div className="slide-head">
+      <div className="slide-head" style={{ marginBottom: '16px' }}>
         <div className="kicker">
-          <span className="pill accent">ABOUT ZION</span>
-          <span>OUR JOURNEY · 6 YEARS</span>
+          <span className="pill accent">COMPANY OVERVIEW</span>
+          <span>ABOUT ZION · 6 YEARS</span>
         </div>
       </div>
-      <h2 style={{ fontSize: '32px', marginBottom: '12px' }}>
-        在过去的 6 年里，<span className="accent">我们只死磕了一件事</span>
+      <h2 style={{ fontSize: '38px', fontWeight: '700', marginBottom: '8px', lineHeight: '1.2' }}>
+        关于 Zion：<span className="accent">从无代码时代 到 Vibe Coding 时代</span>
       </h2>
-      <p className="muted" style={{ fontSize: '15px', marginBottom: '24px' }}>
-        让没有技术背景的创业者，通过 Zion 可视化编辑器，自主开发并交付微信小程序与 Web 站点。
+      <p className="muted" style={{ fontSize: '15px', marginBottom: '20px' }}>
+        在过去的 6 年里，我们只死磕了一件事：帮助没有技术背景的创业者，通过 Zion 可视化编辑器自主开发并交付微信小程序与 Web 站点。
       </p>
 
       <div className="grid-2" style={{ flex: 1, gap: '28px', alignItems: 'stretch' }}>
