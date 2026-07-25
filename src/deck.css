@@ -737,6 +737,47 @@ body.present .present-hud{display:block}
   to{opacity:1;transform:translateY(0)}
 }
 
+/* 飞书通知弹窗 */
+.feishu-toast{
+  position:absolute;top:20px;right:32px;z-index:80;
+  display:flex;align-items:flex-start;gap:12px;
+  width:320px;padding:12px 14px;
+  background:#ffffff;border:1px solid #3370ff;
+  border-left:5px solid #3370ff;
+  border-radius:8px;
+  box-shadow:0 12px 32px rgba(51,112,255,.18), 0 4px 12px rgba(0,0,0,.08);
+  opacity:0;transform:translateY(-16px) scale(.92);
+  pointer-events:none;
+  transition:all .45s cubic-bezier(.175,.885,.32,1.275);
+}
+.feishu-toast.show{
+  opacity:1;transform:translateY(0) scale(1);
+}
+.feishu-toast-icon{
+  width:24px;height:24px;flex-shrink:0;margin-top:2px;
+  display:flex;align-items:center;justify-content:center;
+}
+.feishu-toast-icon svg{
+  width:100%;height:100%;display:block;
+}
+.feishu-toast-content{
+  flex:1;min-width:0;display:flex;flex-direction:column;gap:3px;
+}
+.feishu-toast-header{
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--font-mono);font-size:10.5px;color:var(--muted);
+}
+.feishu-toast-app{
+  color:#3370ff;font-weight:600;
+}
+.feishu-toast-title{
+  font-size:13px;font-weight:700;color:var(--ink);line-height:1.3;
+}
+.feishu-toast-body{
+  font-size:11.5px;color:var(--muted);line-height:1.45;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+
 /* 重播按钮 */
 .replay-btn{
   position:absolute;bottom:20px;right:80px;z-index:60;

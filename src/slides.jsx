@@ -15,8 +15,10 @@ export function Slide_s01() {
         <span>Zion Plugin 极速开发指南</span>
       </div>
       <div>
-        <h1><span className="accent">Zion Plugin</span> 黑客松指南</h1>
-        <div className="cover-sub">使用 Zion 开发套件自动交付前端与可视化后端，不做 PPT 选手，直出真项目！</div>
+        <h1><span className="accent">Zion Plugin</span></h1>
+        <div className="cover-sub" style={{ fontSize: '32px', fontWeight: '600', color: '#fff', marginTop: '16px' }}>
+          从今天开始 让 AI 搭建出可视化的产品后端
+        </div>
       </div>
       <div className="cover-foot" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', width: '100%' }}>
         <div>
@@ -112,7 +114,7 @@ export function Slide_s04() {
     <div className="slide-head">
       <div className="kicker"><span className="pill">INTRO</span><span>HACKATHON PAIN POINTS</span></div>
     </div>
-    <h2 style={{"fontSize":"32px","marginBottom":"24px"}}>在过去的数十场黑客松中，<span className="accent">我们发现选手们...</span></h2>
+    <h2 style={{"fontSize":"32px","marginBottom":"24px"}}>被 Vibe coding <span className="accent">后端绊住的用户...</span></h2>
     
     <div className="grid-2" style={{"flex":"1","gap":"32px","alignContent":"center","marginTop":"10px"}}>
       {/*  Pit 1  */}

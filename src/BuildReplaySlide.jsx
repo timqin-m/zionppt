@@ -16,7 +16,7 @@ const SCHEDULE = [
 ];
 
 const USER_INSTRUCTION =
-  '用 Zion Plugin 帮我搭一个 AI 饮食助手后端：一张餐食记录表、一个卡路里分析 Agent（Gemini 3.5 Flash、结构化 JSON 输出）、一个『分析餐食并入库』行为流，配好权限并上线。';
+  '用 Zion Plugin 帮我搭一个 AI 饮食助手后端：一张餐食记录表、一个卡路里分析 Agent（Gemini 3.5 Flash、结构化 JSON 输出）、一个『分析餐食并入库』行为流（含飞书通知 API），配好权限并上线。';
 
 const STEPS = [
   'ADD_TABLES 餐食记录',
@@ -42,8 +42,15 @@ const MEAL_FIELDS = [
   ['advice', 'TEXT'],
   ['image', 'IMAGE'],
 ];
-const JSON_LINES = ['{', '  "total_calories": number,', '  "advice": string,', '  "foods": [...]', '}'];
-const FLOW_NODES = ['Input', '🤖 Run AI', '⬇ Insert DB', 'Output'];
+const JSON_LINES = [
+  '{',
+  '  "food_name": string,',
+  '  "calories": number,',
+  '  "meal_type": string,',
+  '  "advice": string',
+  '}',
+];
+const FLOW_NODES = ['输入', '🤖 运行 AI', '⬇ 写入数据库', '📨 飞书通知 API', '输出'];
 
 export default function BuildReplaySlide() {
   const sectionRef = useRef(null);
@@ -64,6 +71,13 @@ export default function BuildReplaySlide() {
     setPhase(0);
     playingRef.current = true;
     timersRef.current = SCHEDULE.map((t, i) => setTimeout(() => setPhase(i + 1), t));
+    // 在动画总时间后加上 3 秒停顿，然后循环播放
+    const loopTimer = setTimeout(() => {
+      if (playingRef.current && visibleRef.current) {
+        start();
+      }
+    }, SCHEDULE[SCHEDULE.length - 1] + 3000);
+    timersRef.current.push(loopTimer);
   }, [stop]);
 
   // 进入视口自动播放 / 离开重置；演讲模式下跟随 .active class
@@ -127,6 +141,26 @@ export default function BuildReplaySlide() {
   return (
     <section className="slide" id="build-replay" data-accent="spark" ref={sectionRef}>
       <div className="signature">✦ @functorz.com</div>
+
+      {/* 飞书通知弹窗（行为流出现/触发时右上角弹出） */}
+      <div className={`feishu-toast${phase >= 10 ? ' show' : ''}`}>
+        <div className="feishu-toast-icon">
+          <svg width="24" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M88.7 32.5C80.2 19.3 62.7 15.3 49.5 23.8C36.3 32.3 32.3 49.8 40.8 63L191.6 298.5C198.8 309.7 211.2 316.5 224.6 316.5H448C465.7 316.5 480 302.2 480 284.5C480 277.2 477.5 270.2 473 264.5L88.7 32.5Z" fill="#00D6B9"/>
+            <path d="M423.3 479.5C431.8 492.7 449.3 496.7 462.5 488.2C475.7 479.7 479.7 462.2 471.2 449L320.4 213.5C313.2 202.3 300.8 195.5 287.4 195.5H64C46.3 195.5 32 209.8 32 227.5C32 234.8 34.5 241.8 39 247.5L423.3 479.5Z" fill="#0052D9"/>
+            <path d="M125.7 101.5C117.2 88.3 99.7 84.3 86.5 92.8C73.3 101.3 69.3 118.8 77.8 132L228.6 367.5C235.8 378.7 248.2 385.5 261.6 385.5H485.3C498 385.5 508.8 376.1 510.6 363.5C512.4 350.9 504.6 339.2 492.3 336.1L125.7 101.5Z" fill="#3370FF"/>
+          </svg>
+        </div>
+        <div className="feishu-toast-content">
+          <div className="feishu-toast-header">
+            <span className="feishu-toast-app">飞书机器人</span>
+            <span className="feishu-toast-time">刚刚</span>
+          </div>
+          <div className="feishu-toast-title">有新的分析记录出现！</div>
+          <div className="feishu-toast-body">用户提交了「一碗螺蛳粉加炸蛋加冰可乐」，已自动完成 AI 分析并入库。</div>
+        </div>
+      </div>
+
       <div className="slide-head" style={{ marginBottom: '12px' }}>
         <div className="kicker">
           <span className="pill accent">BEHIND THE SCENES</span>
