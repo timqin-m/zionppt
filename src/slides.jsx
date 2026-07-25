@@ -146,17 +146,25 @@ export function Slide_s01_about({ active }) {
   }, [active]);
 
   return (
-    <section className={`slide ${active ? 'active-slide' : ''}`} id="s01_about" data-accent="core" style={{ justifyContent: 'center', alignItems: 'center', textAlign: 'center', padding: '60px 80px' }}>
+    <section className={`slide ${active ? 'active-slide' : ''}`} id="s01_about" data-accent="core" style={{ padding: '60px 80px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
       <div className="signature">✦ @functorz.com</div>
       
-      <div style={{ maxWidth: '1020px', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <h1 className="about-title-anim" style={{ fontSize: '54px', fontWeight: '800', lineHeight: '1.2', letterSpacing: '-0.02em', marginBottom: '20px' }}>
-          关于 Zion：<span className="accent">在过去的 6 年里，我们只死磕了一件事</span>
-        </h1>
+      <div className="slide-head" style={{ marginBottom: '0' }}>
+        <div className="kicker">
+          <span className="pill accent">ABOUT ZION</span>
+          <span>关于 ZION</span>
+        </div>
+      </div>
 
-        <p className="about-sub-anim" style={{ fontSize: '21px', color: 'var(--muted)', fontWeight: '300', lineHeight: '1.6', maxWidth: '840px', marginBottom: '52px' }}>
-          让没有技术背景的创业者，通过 Zion 可视化编辑器自主开发并交付微信小程序、网站与 Web 应用。
-        </p>
+      <div style={{ maxWidth: '1080px', margin: '0 auto', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+        <div style={{ fontSize: '15px', fontWeight: '600', color: 'var(--muted)', letterSpacing: '0.08em', marginBottom: '16px' }}>
+          在过去的 6 年里，我们只死磕了一件事
+        </div>
+
+        <h1 className="about-title-anim" style={{ fontSize: '46px', fontWeight: '800', lineHeight: '1.3', letterSpacing: '-0.01em', marginBottom: '44px', color: 'var(--ink)' }}>
+          让没有技术背景的创业者，通过 Zion 可视化编辑器<br />
+          <span className="accent">自主开发并交付微信小程序、网站与 Web 应用</span>
+        </h1>
 
         {/* 动态大数字面板 */}
         <div className="grid-3 about-stats-grid" style={{ width: '100%', gap: '28px' }}>
