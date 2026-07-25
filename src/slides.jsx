@@ -113,15 +113,11 @@ export function Slide_s01_about() {
       <div className="signature">✦ @functorz.com</div>
       
       <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <div className="tag solid" style={{ background: 'var(--accent-deep)', color: '#fff', fontSize: '13px', padding: '6px 16px', borderRadius: '20px', letterSpacing: '0.15em', marginBottom: '24px', fontWeight: '600' }}>
-          ABOUT ZION · 6 YEARS
-        </div>
-
-        <h1 style={{ fontSize: '56px', fontWeight: '800', lineHeight: '1.2', letterSpacing: '-0.02em', marginBottom: '20px' }}>
+        <h1 style={{ fontSize: '56px', fontWeight: '800', lineHeight: '1.2', letterSpacing: '-0.02em', marginBottom: '24px' }}>
           关于 Zion：<span className="accent">在过去的 6 年里，我们只死磕了一件事</span>
         </h1>
 
-        <p style={{ fontSize: '22px', color: 'var(--muted)', fontWeight: '300', lineHeight: '1.6', maxWidth: '820px', marginBottom: '48px' }}>
+        <p style={{ fontSize: '22px', color: 'var(--muted)', fontWeight: '300', lineHeight: '1.6', maxWidth: '820px', marginBottom: '56px' }}>
           让没有技术背景的创业者，通过 Zion 可视化编辑器自主开发并交付微信小程序、网站与 Web 应用。
         </p>
 
