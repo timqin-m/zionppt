@@ -163,7 +163,7 @@ export function Slide_s01_about({ active }) {
 
         <h1 className="about-title-anim" style={{ fontSize: '46px', fontWeight: '800', lineHeight: '1.3', letterSpacing: '-0.01em', marginBottom: '44px', color: 'var(--ink)' }}>
           让没有技术背景的创业者，通过 Zion 可视化编辑器<br />
-          <span className="accent">自主开发并交付微信小程序、网站与 Web 应用</span>
+          <span className="accent">自主开发并交付微信小程序、Web 应用</span>
         </h1>
 
         {/* 动态大数字面板 */}
