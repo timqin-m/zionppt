@@ -1,6 +1,5 @@
 // Auto-generated from zion-baas-hackathon-guide-slides.html — 幻灯片 markup 1:1 移植，勿手改
 import { useState, useEffect, useRef } from 'react';
-import { PerkImageLine, PerkVideoLine } from './PerkEffects.jsx';
 import { ScenarioCards } from './ScenarioCards.jsx';
 
 export function Slide_s01() {
@@ -67,7 +66,7 @@ export function Slide_s01() {
               padding: '2px 6px',
               borderRadius: '4px'
             }}>
-              ONLINE DEMO
+              在线演示
             </span>
             <div style={{ fontSize: '15px', color: '#fff', fontWeight: '600' }}>
               Zion 演示站点
@@ -83,7 +82,7 @@ export function Slide_s01() {
               alignItems: 'center',
               gap: '4px'
             }}>
-              <span>📱 手机点击直达 · 扫码访问</span>
+              <span><svg style={{display:"inline",verticalAlign:"middle",marginRight:"4px"}} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg> 手机点击直达 · 扫码访问</span>
             </div>
           </div>
           <div style={{ 
@@ -151,13 +150,12 @@ export function Slide_s01_about({ active }) {
       
       <div className="slide-head" style={{ marginBottom: '0' }}>
         <div className="kicker">
-          <span className="pill accent">ABOUT ZION</span>
-          <span>关于 ZION</span>
+          <span className="pill accent">关于 Zion</span>
         </div>
       </div>
 
       <div style={{ maxWidth: '1080px', margin: '0 auto', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-        <div style={{ fontSize: '15px', fontWeight: '600', color: 'var(--muted)', letterSpacing: '0.08em', marginBottom: '16px' }}>
+        <div style={{ fontSize: '46px', fontWeight: '800', color: 'var(--ink)', letterSpacing: '-0.01em', marginBottom: '16px' }}>
           在过去的 6 年里，我们只死磕了一件事
         </div>
 
@@ -201,55 +199,61 @@ export function Slide_s01_vibe() {
   return (
     <section className="slide" id="s01_vibe" data-accent="spark">
       <div className="signature">✦ @functorz.com</div>
-      <div className="slide-head" style={{ marginBottom: '16px' }}>
+      <div className="slide-head" style={{ marginBottom: '20px' }}>
         <div className="kicker">
-          <span className="pill accent">ERA TRANSITION</span>
-          <span>THE RISE OF VIBE CODING</span>
+          <span className="pill accent">时代变迁</span>
+          <span style={{ textTransform: 'none', letterSpacing: '0.06em' }}>Vibe Coding 的兴起</span>
         </div>
       </div>
-      <h2 style={{ fontSize: '38px', fontWeight: '700', marginBottom: '8px', lineHeight: '1.2' }}>
-        进入 Vibe Coding 时代：<span className="accent">越来越多的人，愿意向前迈出一步</span>
+      <h2 style={{ fontSize: '34px', fontWeight: '700', marginBottom: '8px', lineHeight: '1.3' }}>
+        进入 Vibe Coding 时代：<span className="accent">没有技术背景，也能写出「前端」</span>
       </h2>
-      <p className="muted" style={{ fontSize: '16px', marginBottom: '24px' }}>
-        当大模型具备强悍的 UI 代码生成能力，创作者们开始通过 Vibe Coding 自自主写代码构建产品前端。
+      <p className="muted" style={{ fontSize: '17px', marginBottom: '20px' }}>
+        靠 AI 很快就能做出能打开的页面——有人以为纯 HTML 就是前端，localStorage 就当有了数据库；但真正的数据库、接口、鉴权、Agent 与复杂业务逻辑，对看不懂的人仍是黑盒。
       </p>
 
-      <div className="grid-2" style={{ flex: 1, gap: '28px', alignItems: 'stretch' }}>
-        {/* 左卡片：前端向 AI 靠拢 */}
-        <div className="card" style={{ padding: '28px', borderRadius: '12px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', border: '1px solid var(--hairline)', background: 'var(--white)' }}>
-          <div>
-            <div className="tag" style={{ fontSize: '11px', padding: '3px 8px', borderRadius: '3px', marginBottom: '14px' }}>
-              ✦ 前端变革 · AI 代码助手普及
+      <div className="vibe-flow">
+        <div className="vibe-node">
+          <div className="vibe-node-tag">已经发生</div>
+          <div className="vibe-node-title">AI 写「前端」</div>
+          <div className="vibe-illus vibe-illus-ui" aria-hidden="true">
+            <div className="vibe-bubble">
+              <span /><span /><span />
             </div>
-            <h3 style={{ fontSize: '22px', fontWeight: '700', marginBottom: '14px' }}>
-              用自然语言打造极致前端 UI
-            </h3>
-            <div style={{ fontSize: '14.5px', lineHeight: '1.7', color: 'rgba(0,0,0,0.8)', display: 'grid', gap: '10px' }}>
-              <div>• <strong>降低代码门槛：</strong>Cursor、Windsurf 等 IDE 让人人都可以成为前端开发者。</div>
-              <div>• <strong>极致视觉体验：</strong>借助现代 UI 库与动效组件，创作者能够快速打磨出精美的用户界面。</div>
-              <div>• <strong>面临的核心痛点：</strong>前端搞定了，但后端的云数据库、接口、鉴权与 AI Agent 配置依然是巨大阻碍。</div>
+            <div className="vibe-flow-mini">→</div>
+            <div className="vibe-eye">
+              <i />
+            </div>
+            <div className="vibe-flow-mini">→</div>
+            <div className="vibe-page">
+              <div className="vibe-page-bar"><b /><b /><b /></div>
+              <div className="vibe-page-hero" />
+              <div className="vibe-page-rows"><i /><i /><i /></div>
             </div>
           </div>
+          <div className="vibe-node-meta">Cursor · Codex · 自然语言出页面</div>
+          <div className="vibe-node-status ok">纯 HTML 也常当「前端做完了」</div>
         </div>
 
-        {/* 右卡片：Zion Plugin 应运而生 */}
-        <div className="card tinted" style={{ padding: '28px', borderRadius: '12px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderLeft: '4px solid var(--m-lav)', background: 'var(--m-lav-light)' }}>
-          <div>
-            <div className="tag solid" style={{ background: 'var(--m-lav-dark)', color: '#fff', fontSize: '11px', padding: '3px 8px', borderRadius: '3px', marginBottom: '14px' }}>
-              Zion Plugin 应运而生
-            </div>
-            <h3 style={{ fontSize: '22px', fontWeight: '700', color: 'var(--m-lav-dark)', marginBottom: '14px' }}>
-              把 6 年积累的稳定后端，直接塞进 AI 插件
-            </h3>
-            <div style={{ fontSize: '14.5px', lineHeight: '1.7', color: 'rgba(0,0,0,0.8)', display: 'grid', gap: '10px' }}>
-              <div>• <strong>无缝接入 AI IDE：</strong>将 Zion 6 年沉淀的可视化云后端能力，封装为标准化 Agent Plugin。</div>
-              <div>• <strong>完美的双剑合璧：</strong>前端交给 AI 代码助手生成，后端交给 Zion Plugin 云端自动全托管物化。</div>
-              <div>• <strong>真项目直出：</strong>兼具 AI 编写前端的极高自由度，与 Zion 云端后端的极高稳定性。</div>
+        <div className="vibe-arrow" aria-hidden="true">
+          <span className="vibe-arrow-line" />
+          <span className="vibe-arrow-break">黑盒</span>
+          <span className="vibe-arrow-line" />
+        </div>
+
+        <div className="vibe-node muted-node">
+          <div className="vibe-node-tag warn">看不懂</div>
+          <div className="vibe-node-title">后端</div>
+          <div className="vibe-illus vibe-illus-code" aria-hidden="true">
+            <div className="vibe-code">
+              <div><span className="kw">function</span> auth<span className="fn">()</span> {'{'} … {'}'}</div>
+              <div><span className="kw">function</span> query<span className="fn">()</span> {'{'} … {'}'}</div>
+              <div><span className="kw">function</span> agent<span className="fn">()</span> {'{'} … {'}'}</div>
+              <div><span className="kw">function</span> logic<span className="fn">()</span> {'{'} … {'}'}</div>
             </div>
           </div>
-          <div style={{ background: 'rgba(92,77,244,0.1)', borderRadius: '8px', padding: '10px 14px', fontSize: '12.5px', color: 'var(--m-lav-dark)', fontWeight: '600' }}>
-            ➔ 从“无代码图形编辑器”演进为“Vibe Coding 时代的云端可视化后端”
-          </div>
+          <div className="vibe-node-meta">数据库 · 接口 · 鉴权 · Agent · 复杂业务逻辑</div>
+          <div className="vibe-node-status bad">对非技术是黑盒</div>
         </div>
       </div>
     </section>
@@ -261,47 +265,33 @@ export function Slide_s04() {
 <section className="slide" id="s04" data-accent="spark">
     <div className="signature">✦ @functorz.com</div>
     <div className="slide-head">
-      <div className="kicker"><span className="pill">INTRO</span><span>VIBE CODING PAIN POINTS</span></div>
+      <div className="kicker"><span className="pill">痛点</span><span>后端黑盒会带来什么</span></div>
     </div>
-    <h2 style={{"fontSize":"32px","marginBottom":"24px"}}>被 Vibe coding <span className="accent">后端绊住的用户...</span></h2>
-    
-    <div className="grid-2" style={{"flex":"1","gap":"32px","alignContent":"center","marginTop":"10px"}}>
-      {/*  Pit 1  */}
-      <div className="card" style={{"padding":"28px","background":"rgba(255, 30, 80, 0.03)","borderRadius":"12px","border":"1px solid rgba(255, 30, 80, 0.12)","display":"flex","flexDirection":"column","justifyContent":"center"}}>
-        <div style={{"display":"flex","alignItems":"center","gap":"10px","marginBottom":"16px"}}>
-          <span style={{"background":"var(--m-flam)","color":"var(--white)","fontSize":"11.5px","fontWeight":"bold","padding":"4px 12px","borderRadius":"20px","letterSpacing":"1px"}}>问题一</span>
-          <h3 style={{"color":"var(--m-flam-dark)","fontSize":"22px","fontWeight":"700","margin":"0"}}>两头开战，时间双倍消耗</h3>
-        </div>
-        <div style={{"fontSize":"14.5px","color":"rgba(0,0,0,0.8)","lineHeight":"1.75","display":"grid","gap":"8px"}}>
-          <div style={{"display":"flex","alignItems":"flex-start","gap":"8px"}}>
-            <span style={{"color":"var(--m-flam-dark)","fontWeight":"bold","fontSize":"16px"}}>✦</span>
-            <div>既要磨前端 UI 体验，又要由着 AI 盲配后端环境、无休止地 Debug 联调 API。双线 Vibe Coding 极其消耗时间与精力。</div>
-          </div>
-          <div style={{"display":"flex","alignItems":"flex-start","gap":"8px"}}>
-            <span style={{"color":"var(--m-flam-dark)","fontWeight":"bold","fontSize":"16px"}}>✦</span>
-            <div>导致开发者<strong>根本没时间深入思考 Idea 与打磨产品核心创意</strong>，光是急着把代码赶出来、在红字中 Debug 改报错就消耗了全部精力。</div>
-          </div>
-        </div>
+    <h2 style={{ fontSize: '32px', marginBottom: '10px', lineHeight: 1.25 }}>
+      被 Vibe Coding <span className="accent">后端黑盒</span> 绊住的用户，往往会遇到……
+    </h2>
+    <p className="muted" style={{ fontSize: '16px', marginBottom: '28px' }}>
+      看不见、看不懂的后端，并不是「多写几行就能解决」——迭代、记忆和成本都会一起失控。
+    </p>
+
+    <div className="vibe-pain-grid">
+      <div className="vibe-pain-card">
+        <div className="vibe-pain-num">01</div>
+        <h3>迭代时不敢改</h3>
+        <p>想加一个小需求，却担心动到看不见的 <code>function</code>，把原来能跑的逻辑改崩。</p>
+        <div className="vibe-pain-foot">越改越小心，产品迭代被拖慢</div>
       </div>
-      {/*  Pit 2  */}
-      <div className="card" style={{"padding":"28px","background":"rgba(255, 30, 80, 0.03)","borderRadius":"12px","border":"1px solid rgba(255, 30, 80, 0.12)","display":"flex","flexDirection":"column","justifyContent":"center"}}>
-        <div style={{"display":"flex","alignItems":"center","gap":"10px","marginBottom":"16px"}}>
-          <span style={{"background":"var(--m-flam)","color":"var(--white)","fontSize":"11.5px","fontWeight":"bold","padding":"4px 12px","borderRadius":"20px","letterSpacing":"1px"}}>问题二</span>
-          <h3 style={{"color":"var(--m-flam-dark)","fontSize":"22px","fontWeight":"700","margin":"0"}}>后端与 Agent 均为黑盒，极难调试</h3>
-        </div>
-        <div style={{"flex":"1","display":"flex","alignItems":"center","marginTop":"4px"}}>
-          <svg viewBox="0 0 420 92" style={{"width":"100%","height":"auto"}}>
-            {/*  Single Large Red Box: Double Black Box  */}
-            <rect x="5" y="5" width="410" height="82" rx="8" fill="rgba(255, 30, 80, 0.04)" stroke="rgba(255, 30, 80, 0.18)" strokeWidth="1.5" />
-            {/*  Lock/Closed Box Icon  */}
-            <rect x="18" y="29" width="18" height="14" rx="3" fill="none" stroke="#D63C68" strokeWidth="1.5" />
-            <path d="M 22 29 L 22 23 A 5 5 0 0 1 32 23 L 34 29" fill="none" stroke="#D63C68" strokeWidth="1.5" />
-            
-            <text x="44" y="30" fill="#D63C68" fontSize="12" fontWeight="bold">传统开发：双重黑盒 ✗</text>
-            <text x="44" y="50" fill="#666" fontSize="10.5" fontWeight="bold">• 后端黑盒：复杂的业务逻辑 Function 代码，非后端码农看不懂</text>
-            <text x="44" y="70" fill="#666" fontSize="10.5" fontWeight="bold">• Agent黑盒：大模型的提示词链、工具调用与会话上下文无处排查</text>
-          </svg>
-        </div>
+      <div className="vibe-pain-card">
+        <div className="vibe-pain-num">02</div>
+        <h3>自己忘了写过什么</h3>
+        <p>堆了一堆接口、鉴权、Agent 与业务逻辑，过几天已经记不清每个 function 在干什么。</p>
+        <div className="vibe-pain-foot">维护靠猜，排查靠运气</div>
+      </div>
+      <div className="vibe-pain-card">
+        <div className="vibe-pain-num">03</div>
+        <h3>后端开发 Token 狂烧</h3>
+        <p>在黑盒里反复让 AI 猜配置、猜联调、猜报错，大量 Token 耗在「看不见的后端」上。</p>
+        <div className="vibe-pain-foot">前端省下来的，后端又烧回去</div>
       </div>
     </div>
   </section>
@@ -313,17 +303,33 @@ export function Slide_s01_intro() {
 <section className="slide" id="s01_intro" data-accent="core">
     <div className="signature">✦ @functorz.com</div>
     <div className="slide-head">
-      <div className="kicker"><span className="pill">ELEVATOR PITCH</span><span>一句话介绍 Zion Plugin</span></div>
+      <div className="kicker"><span className="pill">转折</span><span>Zion Plugin 登场</span></div>
     </div>
-    <div style={{"flex":"1","display":"flex","flexDirection":"column","justifyContent":"center","maxWidth":"960px","marginTop":"20px"}}>
-      <div className="qa-block" style={{"padding":"40px","borderRadius":"8px"}}>
-        <div className="qa-tag" style={{"fontSize":"13px","letterSpacing":"0.2em","marginBottom":"16px","color":"var(--accent)","fontWeight":"bold"}}>ZION PLUGIN 开发套件</div>
-        <p style={{"fontSize":"26px","lineHeight":"1.6","fontWeight":"700","color":"var(--ink)","margin":"0","marginBottom":"16px"}}>
-          不过，上述棘手的问题，现在通过 <span className="accent">Zion Plugin（开发套件）</span> 都可以迎刃而解了。
-        </p>
-        <p style={{"fontSize":"20px","lineHeight":"1.6","fontWeight":"500","color":"var(--ink)","margin":"0"}}>
-          它是专为 Vibe Coding 打造的全栈自动化套件。在 AI 编程助手（如 Cursor）中直接集成，即可让 AI 自动完成云数据库、行为流与智能体的可视化配置，并同步完成前端代码生成与真实接口联调。黑盒业务与假数据从此说拜拜👋
-        </p>
+
+    <div className="intro-hero">
+      <div className="intro-brand">Zion Plugin</div>
+      <h2 className="intro-title">
+        上述棘手的问题，现在都可以<span className="accent">迎刃而解</span>
+      </h2>
+      <p className="intro-sub">
+        把 Zion 可视化后端，直接塞进 Cursor 等 AI 编程助手。
+      </p>
+
+      <div className="intro-flow" aria-hidden="true">
+        <div className="intro-step">
+          <div className="intro-step-label">你的 AI IDE</div>
+          <div className="intro-step-title">Cursor · Codex</div>
+        </div>
+        <div className="intro-plus">+</div>
+        <div className="intro-step accent-step">
+          <div className="intro-step-label">开发套件</div>
+          <div className="intro-step-title">Zion Plugin</div>
+        </div>
+        <div className="intro-plus">→</div>
+        <div className="intro-step result-step">
+          <div className="intro-step-label">结果</div>
+          <div className="intro-step-title">后端看得见 · 真接口联调</div>
+        </div>
       </div>
     </div>
   </section>
@@ -335,10 +341,10 @@ export function Slide_s01_agenda() {
 <section className="slide" id="s01_agenda" data-accent="core">
     <div className="signature">✦ @functorz.com</div>
     <div className="slide-head">
-      <div className="kicker"><span className="pill">AGENDA</span><span>目录</span></div>
+      <div className="kicker"><span className="pill">目录</span><span>分享大纲</span></div>
     </div>
-    <h2 style={{"fontSize":"32px","marginBottom":"10px"}}>分享大纲 <span className="accent">/ Syllabus</span></h2>
-    <p className="muted" style={{"fontSize":"16px","marginBottom":"20px"}}>本指南将通过以下 4 个部分，带你彻底掌握 Zion Plugin 与 AI Coding Agent 结对开发的全自动极速流程：</p>
+    <h2 style={{"fontSize":"32px","marginBottom":"10px"}}>分享大纲</h2>
+    <p className="muted" style={{"fontSize":"16px","marginBottom":"20px"}}>本指南将通过以下 3 个部分，带你彻底掌握 Zion Plugin 与 AI Coding Agent 结对开发的全自动极速流程：</p>
     
     <div style={{"display":"grid","gridTemplateColumns":"1fr 1fr","gap":"20px 32px","flex":"1","alignContent":"center"}}>
       <div style={{"display":"flex","gap":"16px","alignItems":"flex-start"}}>
@@ -362,13 +368,6 @@ export function Slide_s01_agenda() {
           <div style={{"fontSize":"13px","color":"var(--muted)","lineHeight":"1.4"}}>空白文件夹启动，首发指令驱动 AI 全自动在云端配置后端并完成前端代码联调。</div>
         </div>
       </div>
-      <div style={{"display":"flex","gap":"16px","alignItems":"flex-start"}}>
-        <div className="num" style={{"fontSize":"32px","color":"var(--accent)","fontWeight":"800","lineHeight":"1"}}>04</div>
-        <div>
-          <div style={{"fontSize":"18px","fontWeight":"bold","color":"var(--ink)","marginBottom":"4px"}}>前端 UI 极速美化</div>
-          <div style={{"fontSize":"13px","color":"var(--muted)","lineHeight":"1.4"}}>云端切图素材上传、媒体表资源一键引用与开源高级组件动效套用。</div>
-        </div>
-      </div>
     </div>
   </section>
   );
@@ -380,7 +379,7 @@ export function Slide_s02() {
     <div className="signature">✦ @functorz.com</div>
     <div className="divider-num"><div className="big">01</div></div>
     <div className="divider-body">
-      <div className="divider-en">SECTION 01 · INTRODUCTION</div>
+      <div className="divider-en">第一部分</div>
       <div className="divider-zh"><strong>先看例子</strong></div>
       <div className="divider-tagline">来看看使用 Zion Plugin 交付的真实商用小程序与 Web 全栈案例</div>
     </div>
@@ -393,7 +392,7 @@ export function Slide_s10_2() {
 <section className="slide" id="s10_2" data-accent="spark">
     <div className="signature">✦ @functorz.com</div>
     <div className="slide-head">
-      <div className="kicker"><span className="pill">1.1</span><span>CASE STUDIES (01/03)</span></div>
+      <div className="kicker"><span className="pill">1.1</span><span>案例展示（1/3）</span></div>
     </div>
     <h2 style={{"fontSize":"32px","marginBottom":"8px"}}><span className="accent">Zion Plugin</span> 案例展示</h2>
     <div style={{"display":"grid","gridTemplateColumns":"1fr 1.3fr","gap":"48px","flex":"1","alignContent":"center","alignItems":"center","width":"100%"}}>
@@ -424,7 +423,7 @@ export function Slide_s10_3() {
 <section className="slide" id="s10_3" data-accent="spark">
     <div className="signature">✦ @functorz.com</div>
     <div className="slide-head">
-      <div className="kicker"><span className="pill">1.2</span><span>CASE STUDIES (02/03)</span></div>
+      <div className="kicker"><span className="pill">1.2</span><span>案例展示（2/3）</span></div>
     </div>
     <h2 style={{"fontSize":"32px","marginBottom":"8px"}}><span className="accent">Zion Plugin</span> 案例展示</h2>
     <div style={{"display":"grid","gridTemplateColumns":"1fr 1.3fr","gap":"48px","flex":"1","alignContent":"center","alignItems":"center","width":"100%"}}>
@@ -455,7 +454,7 @@ export function Slide_s10_4() {
 <section className="slide" id="s10_4" data-accent="spark">
     <div className="signature">✦ @functorz.com</div>
     <div className="slide-head">
-      <div className="kicker"><span className="pill">1.3</span><span>CASE STUDIES (03/03)</span></div>
+      <div className="kicker"><span className="pill">1.3</span><span>案例展示（3/3）</span></div>
     </div>
     <h2 style={{"fontSize":"32px","marginBottom":"8px"}}><span className="accent">Zion Plugin</span> 案例展示</h2>
     <div style={{"display":"grid","gridTemplateColumns":"1fr 1.3fr","gap":"48px","flex":"1","alignContent":"center","alignItems":"center","width":"100%"}}>
@@ -486,7 +485,7 @@ export function Slide_s11() {
 <section className="slide" id="s11" data-accent="spark">
     <div className="signature">✦ @functorz.com</div>
     <div className="slide-head">
-      <div className="kicker"><span className="pill">1.3</span><span>CAPABILITIES</span></div>
+      <div className="kicker"><span className="pill">1.3</span><span>核心能力</span></div>
     </div>
     <h2 style={{"fontSize":"32px","marginBottom":"6px"}}>Zion Plugin (开发套件) <span className="accent">的核心优势</span></h2>
     <p className="muted" style={{"fontSize":"15px","marginBottom":"8px"}}>在编辑器中用自然语言直接驱动 Zion 自动配置可视化云端后端，实现真数据前后端全自动联调：</p>
@@ -519,7 +518,7 @@ export function Slide_s11() {
         </filter>
       </defs>
       
-      {/*  ================= Left Side: IDE / Terminal Theme (Cursor/Claude Code) =================  */}
+      {/*  ================= Left Side: IDE / Terminal Theme =================  */}
       <g filter="url(#soft-shadow)">
         <rect x="10" y="25" width="310" height="260" rx="12" fill="url(#grad-dark-panel)" stroke="rgba(255,255,255,0.08)" strokeWidth="1.5" />
         {/*  IDE Header / Title Bar  */}
@@ -549,7 +548,7 @@ export function Slide_s11() {
         <text x="56" y="209" fill="#3fb950" fontSize="11" fontFamily="var(--font-mono)" fontWeight="bold">Zion Plugin: Auto Backend Sync [OK]</text>
         
         {/*  Footer Info  */}
-        <text x="165" y="248" fill="#8b949e" fontSize="11" fontWeight="bold" textAnchor="middle">工具：Cursor / Claude Code / Codex</text>
+        <text x="165" y="248" fill="#8b949e" fontSize="11" fontWeight="bold" textAnchor="middle">工具：Cursor / Codex / Workbuddy</text>
       </g>
 
       {/*  ================= Middle Connection: Glowing Pipeline =================  */}
@@ -620,17 +619,17 @@ export function Slide_s11() {
           
           {/*  Flowchart node visual  */}
           <rect x="655" y="110" width="116" height="22" rx="11" fill="#ffffff" stroke="#5C4DF4" strokeWidth="1" />
-          <text x="713" y="124" fill="#5C4DF4" fontSize="9.5" fontWeight="bold" textAnchor="middle">🔘 下单事件 (Event)</text>
+          <text x="713" y="124" fill="#5C4DF4" fontSize="9.5" fontWeight="bold" textAnchor="middle">● 下单事件 (Event)</text>
           
           <path d="M 713 132 L 713 144" stroke="#5C4DF4" strokeWidth="1.2" strokeDasharray="2,1.5" />
           
           <rect x="655" y="144" width="116" height="22" rx="11" fill="#ffffff" stroke="#1598FF" strokeWidth="1" />
-          <text x="713" y="158" fill="#1598FF" fontSize="9.5" fontWeight="bold" textAnchor="middle">⬇ 扣减库存 (DB)</text>
+          <text x="713" y="158" fill="#1598FF" fontSize="9.5" fontWeight="bold" textAnchor="middle">↓ 扣减库存 (DB)</text>
           
           <path d="M 713 166 L 713 178" stroke="#FF799C" strokeWidth="1.2" strokeDasharray="2,1.5" />
           
           <rect x="655" y="178" width="116" height="22" rx="11" fill="#ffffff" stroke="#FF799C" strokeWidth="1" />
-          <text x="713" y="192" fill="#FF799C" fontSize="9.5" fontWeight="bold" textAnchor="middle">🤖 AI 智能分析 (Agent)</text>
+          <text x="713" y="192" fill="#FF799C" fontSize="9.5" fontWeight="bold" textAnchor="middle">⊛ AI 智能分析 (Agent)</text>
 
           <text x="713" y="222" fill="#333" fontSize="11.5" fontWeight="bold" textAnchor="middle">积木式流程编排</text>
           <text x="713" y="240" fill="#777" fontSize="10.5" textAnchor="middle">同步回滚/工作流免代码</text>
@@ -671,8 +670,8 @@ export function Slide_s11() {
           <text x="832" y="175" fill="#8b949e" fontSize="7" fontWeight="bold" fontFamily="var(--font-mono)">  GPT-5.6 (多模态推理)</text>
           <line x1="829" y1="180" x2="951" y2="180" stroke="rgba(255,255,255,0.05)" strokeWidth="0.5" />
 
-          {/*  Item 4: Claude  */}
-          <text x="832" y="190" fill="#8b949e" fontSize="7" fontWeight="bold" fontFamily="var(--font-mono)">  Nano Banana 2 / Veo 3.1</text>
+          {/*  Item 4: 更多模型  */}
+          <text x="832" y="190" fill="#8b949e" fontSize="7" fontWeight="bold" fontFamily="var(--font-mono)">  DeepSeek / 通义 / 更多</text>
 
           <text x="890" y="222" fill="#333" fontSize="11.5" fontWeight="bold" textAnchor="middle">思考流与结构化输出</text>
           <text x="890" y="240" fill="#777" fontSize="10.5" textAnchor="middle">一站秒切 DeepSeek / Gemini</text>
@@ -691,7 +690,7 @@ export function Slide_s03() {
 <section className="slide" id="s03" data-accent="core">
     <div className="signature">✦ @functorz.com</div>
     <div className="slide-head">
-      <div className="kicker"><span className="pill">1.3</span><span>OVERVIEW</span></div>
+      <div className="kicker"><span className="pill">1.3</span><span>流程总览</span></div>
     </div>
     <h2 style={{"fontSize":"32px","marginBottom":"8px"}}>用 AI 开发全栈项目，其实只要 3 步</h2>
     <p className="muted" style={{"fontSize":"16px","marginBottom":"28px"}}>你只需负责想好产品创意（Idea），剩下的代码编写和云端后端配置，交由 AI 助手结对高效完成即可：</p>
@@ -722,12 +721,55 @@ export function Slide_s03() {
   );
 }
 
+export function Slide_s03_alt() {
+  return (
+    <section className="slide" id="s03_alt" data-accent="core">
+      <div className="signature">✦ @functorz.com</div>
+      <div className="slide-head" style={{ marginBottom: '16px' }}>
+        <div className="kicker">
+          <span className="pill accent">另一条路</span>
+          <span>Zion AI Copilot</span>
+        </div>
+      </div>
+      <h2 style={{ fontSize: '32px', fontWeight: 800, marginBottom: '10px', lineHeight: 1.3 }}>
+        不想让 Coding Agent 配后端？<span className="accent">也可以</span>
+      </h2>
+      <p className="muted" style={{ fontSize: '17px', marginBottom: '40px', maxWidth: '920px' }}>
+        直接用 Zion AI Copilot 在可视化控制台里完成后端配置，再用 Vibe Coding 专心写前端。
+      </p>
+
+      <div className="copilot-paths">
+        <div className="copilot-path">
+          <div className="copilot-path-label">路径 A · 全交给 Agent</div>
+          <div className="copilot-path-flow">
+            <span>Coding Agent</span>
+            <i>+</i>
+            <span>Zion Plugin</span>
+            <i>→</i>
+            <span>后端 + 前端一起出</span>
+          </div>
+        </div>
+        <div className="copilot-path featured">
+          <div className="copilot-path-label">路径 B · 前后端分工</div>
+          <div className="copilot-path-flow">
+            <span className="hi">Zion AI Copilot</span>
+            <i>→</i>
+            <span>可视化后端配好</span>
+            <i>→</i>
+            <span className="hi">Vibe Coding 写前端</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function Slide_s03_compat() {
   return (
 <section className="slide" id="s03_compat" data-accent="core">
     <div className="signature">✦ @functorz.com</div>
     <div className="slide-head">
-      <div className="kicker"><span className="pill">COMPATIBILITY</span><span>智能体生态</span></div>
+      <div className="kicker"><span className="pill">生态</span><span>兼容主流智能体</span></div>
     </div>
     <h2 style={{"fontSize":"32px","marginBottom":"10px"}}>兼容主流 <span className="accent">Coding Agent</span></h2>
     <p className="muted" style={{"fontSize":"16px","marginBottom":"24px"}}>支持在以下主流 AI 编辑器/编程助手里直接添加 Zion Plugin 插件，开展高度精准、无缝的前后端全托管 Vibe Coding：</p>
@@ -737,21 +779,18 @@ export function Slide_s03_compat() {
         <div style={{"fontSize":"22px","fontWeight":"bold","color":"var(--ink)"}}>Cursor</div>
       </div>
       <div className="card tinted" style={{"padding":"24px 16px","borderRadius":"8px","textAlign":"center","display":"flex","flexDirection":"column","justifyContent":"center","alignItems":"center"}}>
-        <div style={{"fontSize":"22px","fontWeight":"bold","color":"var(--ink)"}}>Claude Code</div>
+        <div style={{"fontSize":"22px","fontWeight":"bold","color":"var(--ink)"}}>Codex</div>
       </div>
       <div className="card tinted" style={{"padding":"24px 16px","borderRadius":"8px","textAlign":"center","display":"flex","flexDirection":"column","justifyContent":"center","alignItems":"center"}}>
         <div style={{"fontSize":"20px","fontWeight":"bold","color":"var(--ink)"}}>Workbuddy</div>
       </div>
       <div className="card tinted" style={{"padding":"24px 16px","borderRadius":"8px","textAlign":"center","display":"flex","flexDirection":"column","justifyContent":"center","alignItems":"center"}}>
-        <div style={{"fontSize":"22px","fontWeight":"bold","color":"var(--ink)"}}>Codex</div>
-      </div>
-      <div className="card tinted" style={{"padding":"24px 16px","borderRadius":"8px","textAlign":"center","display":"flex","flexDirection":"column","justifyContent":"center","alignItems":"center"}}>
         <div style={{"fontSize":"22px","fontWeight":"bold","color":"var(--ink)"}}>Kimi Code</div>
       </div>
-      {/*  Row 2  */}
       <div className="card tinted" style={{"padding":"24px 16px","borderRadius":"8px","textAlign":"center","display":"flex","flexDirection":"column","justifyContent":"center","alignItems":"center"}}>
         <div style={{"fontSize":"22px","fontWeight":"bold","color":"var(--ink)"}}>Qoder</div>
       </div>
+      {/*  Row 2  */}
       <div className="card tinted" style={{"padding":"24px 16px","borderRadius":"8px","textAlign":"center","display":"flex","flexDirection":"column","justifyContent":"center","alignItems":"center"}}>
         <div style={{"fontSize":"22px","fontWeight":"bold","color":"var(--ink)"}}>Opencode</div>
       </div>
@@ -774,29 +813,33 @@ export function Slide_s05() {
 <section className="slide" id="s05" data-accent="spark">
     <div className="signature">✦ @functorz.com</div>
     <div className="slide-head">
-      <div className="kicker"><span className="pill">1.2</span><span>AI AGENT SOLUTIONS</span></div>
+      <div className="kicker"><span className="pill">1.2</span><span>AI 智能体方案</span></div>
     </div>
     <h2 style={{"fontSize":"32px","marginBottom":"8px"}}><span className="accent">Zion 能给你的</span>：一站式 AI 智能体托管</h2>
-    <div style={{"display":"grid","gridTemplateColumns":"1fr 1.2fr","gap":"48px","flex":"1","alignContent":"center","alignItems":"stretch","marginTop":"20px","width":"100%"}}>
-      {/*  Left Column (General info)  */}
+    <div style={{"display":"grid","gridTemplateColumns":"1fr 1.15fr","gap":"48px","flex":"1","alignContent":"center","alignItems":"stretch","marginTop":"20px","width":"100%"}}>
       <div style={{"display":"flex","flexDirection":"column","justifyContent":"center","alignItems":"flex-start"}}>
-        <span className="tag solid" style={{"background":"var(--accent-deep)","color":"var(--white)","fontWeight":"600","border":"0","fontSize":"12px","padding":"4px 10px","borderRadius":"4px","marginBottom":"16px"}}>拒绝到处「薅 Token 羊毛」</span>
+        <span className="tag solid" style={{"background":"var(--accent-deep)","color":"var(--white)","fontWeight":"600","border":"0","fontSize":"12px","padding":"4px 10px","borderRadius":"4px","marginBottom":"16px"}}>拒绝到处找 Key</span>
         <h3 style={{"fontSize":"28px","fontWeight":"bold","color":"var(--accent-deep)","margin":"0","marginBottom":"14px","lineHeight":"1.2"}}>免去自备与配置 API Key</h3>
-        <p style={{"fontSize":"14.5px","color":"rgba(0,0,0,0.75)","lineHeight":"1.65","margin":"0"}}>在用 AI 构建产品时，开发者最头疼的就是<b>要对接 Gemini、GPT 以及各类国产模型（如 DeepSeek）时，需要到处去找、去注册账号、到处去薅免费 Token 羊毛和配置 API Key</b>。一到产品发布与演示现场，由于自备的免费额度超限或网络断供，极易导致产品当场崩溃！<br /><br />Zion Plugin 云端一站式提供了上述所有最新主流模型。一键下拉菜单即可在云端秒级自由切换，彻底消除多平台找 Key 与配置 SDK 的折磨！</p>
+        <p style={{"fontSize":"14.5px","color":"rgba(0,0,0,0.75)","lineHeight":"1.65","margin":"0"}}>对接 Gemini、GPT、DeepSeek 等模型时，往往要到处注册账号、配置 API Key；演示现场还可能因额度或网络当场翻车。<br /><br />Zion Plugin 在云端一站式接入主流模型，下拉即可切换，不用自己到处找 Key、配 SDK。</p>
       </div>
-      {/*  Right Column (Welfare Highlight Card)  */}
-      <div className="card tinted" style={{"padding":"32px","borderRadius":"12px","display":"flex","flexDirection":"column","justifyContent":"center","borderLeft":"5px solid var(--accent)","borderTop":"0","borderBottom":"0","borderRight":"0"}}>
-        <div style={{"fontWeight":"bold","fontSize":"20px","marginBottom":"14px","color":"var(--accent-deep)"}}>🌟 开发者专属全栈资源</div>
-        <div style={{"fontSize":"14px","color":"rgba(0,0,0,0.85)","marginBottom":"12px","fontWeight":"bold"}}>
-          所有开发者均可获得 <span className="accent">Zion 专业版</span> 及充足的 AI Points（基础额度）：
+      <div className="card tinted" style={{"padding":"28px 26px","borderRadius":"12px","display":"flex","flexDirection":"column","justifyContent":"center","borderLeft":"5px solid var(--accent)","borderTop":"0","borderBottom":"0","borderRight":"0","gap":"16px"}}>
+        <div style={{"fontWeight":"bold","fontSize":"18px","color":"var(--accent-deep)"}}>云端模型 · 一键切换</div>
+        <div style={{"display":"flex","flexWrap":"wrap","gap":"10px"}}>
+          {['Gemini', 'GPT', 'DeepSeek', '通义千问', '更多…'].map((m) => (
+            <span key={m} style={{
+              fontFamily: 'var(--font-mono)',
+              fontSize: '13px',
+              fontWeight: 600,
+              color: 'var(--accent-deep)',
+              background: 'rgba(92,77,244,.08)',
+              border: '1px solid rgba(92,77,244,.16)',
+              padding: '8px 12px',
+              borderRadius: '4px',
+            }}>{m}</span>
+          ))}
         </div>
-        <div style={{"display":"grid","gap":"12px","fontSize":"13.5px","color":"rgba(0,0,0,0.75)","lineHeight":"1.6"}}>
-          <div>⚡ <strong>1. Gemini 系列模型（以 3.5 Flash 为例）：</strong><br />至少包含约 <span className="accent" style={{"fontWeight":"bold"}}>2000 万 Tokens</span> 输入 / <span className="accent" style={{"fontWeight":"bold"}}>330 万 Tokens</span> 输出！</div>
-          <PerkImageLine />
-          <PerkVideoLine />
-        </div>
-        <div style={{"fontSize":"12px","color":"var(--muted)","marginTop":"14px","fontWeight":"bold","borderTop":"1px dashed rgba(0,0,0,0.1)","paddingTop":"10px"}}>
-          💡 注：上述为默认基础用量。如有更高额度创意需求，可随时联系 <b>Zion 团队 Timqin</b> 申请额外额度！
+        <div style={{"fontSize":"13.5px","color":"var(--muted)","lineHeight":"1.6","borderTop":"1px dashed rgba(0,0,0,0.1)","paddingTop":"14px"}}>
+          Agent 配置页直接选模型 · 无需自备 Key · 真接口联调可用
         </div>
       </div>
     </div>
@@ -809,28 +852,26 @@ export function Slide_s05_2() {
 <section className="slide" id="s05_2" data-accent="spark">
     <div className="signature">✦ @functorz.com</div>
     <div className="slide-head">
-      <div className="kicker"><span className="pill">1.3</span><span>SERVERLESS SOLUTIONS</span></div>
+      <div className="kicker"><span className="pill">1.3</span><span>免运维部署</span></div>
     </div>
     <h2 style={{"fontSize":"32px","marginBottom":"8px"}}><span className="accent">Zion 能给你的</span>：免服务器运维与部署</h2>
-    <div style={{"display":"grid","gridTemplateColumns":"1fr 1.2fr","gap":"48px","flex":"1","alignContent":"center","alignItems":"center","width":"100%"}}>
-      {/*  Left Column (General info)  */}
+    <div style={{"display":"grid","gridTemplateColumns":"1fr 1.15fr","gap":"48px","flex":"1","alignContent":"center","alignItems":"center","width":"100%"}}>
       <div style={{"display":"flex","flexDirection":"column","justifyContent":"center","alignItems":"flex-start"}}>
-        <span className="tag solid" style={{"background":"var(--accent-deep)","color":"var(--white)","fontWeight":"600","border":"0","fontSize":"12px","padding":"4px 10px","borderRadius":"4px","marginBottom":"16px"}}>全托管 Serverless 架构</span>
-        <h3 style={{"fontSize":"28px","fontWeight":"bold","color":"var(--accent-deep)","margin":"0","marginBottom":"14px","lineHeight":"1.2"}}>真正的零运维物理托管</h3>
-        <p style={{"fontSize":"14.5px","color":"rgba(0,0,0,0.75)","lineHeight":"1.65","margin":"0"}}>不需要本地安装 Docker、配置端口映射，也不需要租用服务器自建 PostgreSQL 数据库。Zion 为你提供一整套在云端安全运行的全托管 Serverless 物理资源环境。<br /><br />自动生成高可用、极低延迟的标准云端数据接口，双端实时在线打通，让你的精力 100% 专注于前端 UI 体验打磨与核心产品功能实现。</p>
+        <span className="tag solid" style={{"background":"var(--accent-deep)","color":"var(--white)","fontWeight":"600","border":"0","fontSize":"12px","padding":"4px 10px","borderRadius":"4px","marginBottom":"16px"}}>全托管 Serverless</span>
+        <h3 style={{"fontSize":"28px","fontWeight":"bold","color":"var(--accent-deep)","margin":"0","marginBottom":"14px","lineHeight":"1.2"}}>真正的零运维托管</h3>
+        <p style={{"fontSize":"14.5px","color":"rgba(0,0,0,0.75)","lineHeight":"1.65","margin":"0"}}>不用自己装 Docker、租服务器、搭数据库。后端在云端全托管跑起来，接口直接可用，精力留给产品本身。</p>
       </div>
-      {/*  Right Column (Welfare Highlight Card)  */}
-      <div className="card tinted" style={{"padding":"32px","borderRadius":"12px","display":"flex","flexDirection":"column","justifyContent":"center","borderLeft":"5px solid var(--accent)","borderTop":"0","borderBottom":"0","borderRight":"0"}}>
-        <div style={{"fontWeight":"bold","fontSize":"20px","marginBottom":"14px","color":"var(--accent-deep)"}}>免去后端全套部署与运维折磨</div>
-        <div style={{"display":"grid","gap":"12px","fontSize":"14px","color":"rgba(0,0,0,0.75)","lineHeight":"1.6"}}>
-          <div>✓ <strong>Zion 云端专业版高规服务器配置（管够）：</strong></div>
-          <div style={{"paddingLeft":"14px","display":"grid","gap":"6px","fontWeight":"bold","color":"var(--accent-deep)"}}>
-            <div>• 💾 1G PostgreSQL 云端数据库物理空间</div>
-            <div>• 📁 10G OSS 阿里云多媒体媒体资源存储空间</div>
-            <div>• ⚡ 10G CDN 全局网络加速分发网络流量</div>
+      <div style={{"display":"flex","flexDirection":"column","gap":"14px","justifyContent":"center"}}>
+        {[
+          ['不用自己运维', '服务器 · 数据库 · 存储 · CDN'],
+          ['接口自动就绪', '配置完即可联调，前后端打通'],
+          ['专注做产品', '少折腾部署，多打磨体验'],
+        ].map(([title, desc]) => (
+          <div key={title} style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+            <div style={{ fontSize: '20px', fontWeight: 800, color: 'var(--accent-deep)' }}>{title}</div>
+            <div style={{ fontSize: '14.5px', color: 'var(--muted)', lineHeight: 1.5 }}>{desc}</div>
           </div>
-          <div style={{"borderTop":"1px dashed rgba(0,0,0,0.1)","paddingTop":"10px","marginTop":"4px"}}>✓ <strong>在线实时暴露 GraphQL 接口</strong>：AI 配置好的后端可以一秒暴露标准、安全的云端 API，双端瞬秒联动直接调试！</div>
-        </div>
+        ))}
       </div>
     </div>
   </section>
@@ -843,7 +884,7 @@ export function Slide_s12() {
     <div className="signature">✦ @functorz.com</div>
     <div className="divider-num"><div className="big">02</div></div>
     <div className="divider-body">
-      <div className="divider-en">SECTION 02 · GETTING STARTED</div>
+      <div className="divider-en">第二部分</div>
       <div className="divider-zh"><strong>准备工作</strong>与<br />安装 Zion Plugin</div>
       <div className="divider-tagline">零终端配置，一揽子开发套件集成，秒级开启 AI 结对编程</div>
     </div>
@@ -856,7 +897,7 @@ export function Slide_s13() {
 <section className="slide" id="s13" data-accent="hack">
     <div className="signature">✦ @functorz.com</div>
     <div className="slide-head">
-      <div className="kicker"><span className="pill">3.1</span><span>PREPARATION</span></div>
+      <div className="kicker"><span className="pill">2.1</span><span>准备工作</span></div>
     </div>
     <h2 style={{"fontSize":"32px","marginBottom":"10px"}}>极速开始的 <span className="accent">3 项准备</span></h2>
     <div style={{"flex":"1","display":"flex","flexDirection":"column","justifyContent":"center","marginTop":"20px","maxWidth":"1120px"}}>
@@ -877,7 +918,7 @@ export function Slide_s13() {
         </li>
         <li style={{"display":"flex","alignItems":"center","gap":"16px"}}>
           <span style={{"background":"var(--accent)","color":"var(--white)","width":"36px","height":"36px","borderRadius":"50%","display":"inline-flex","alignItems":"center","justifyContent":"center","fontWeight":"800","fontSize":"16px","flexShrink":"0"}}>3</span> 
-          <span><strong>开始你的软件开发！</strong>（支持 Cursor、Claude Code、Codex、Workbuddy 等主流工具）</span>
+          <span><strong>开始你的软件开发！</strong>（支持 Cursor、Codex、Workbuddy 等主流工具）</span>
         </li>
       </ul>
     </div>
@@ -890,7 +931,7 @@ export function Slide_s16() {
 <section className="slide" id="s16" data-accent="hack">
     <div className="signature">✦ @functorz.com</div>
     <div className="slide-head">
-      <div className="kicker"><span className="pill">3.2</span><span>INSTALLATION</span></div>
+      <div className="kicker"><span className="pill">2.2</span><span>安装插件</span></div>
     </div>
     <h2 style={{"fontSize":"32px","marginBottom":"10px"}}>Zion Plugin (开发套件) <span className="accent">安装与更新</span></h2>
     <div style={{"flex":"1","display":"flex","flexDirection":"column","justifyContent":"center","marginTop":"20px","maxWidth":"1120px"}}>
@@ -899,11 +940,11 @@ export function Slide_s16() {
       </p>
       <div style={{"display":"grid","gap":"20px","fontSize":"18px","color":"rgba(0,0,0,0.85)","lineHeight":"1.7"}}>
         <div style={{"background":"rgba(21,152,255,0.04)","borderLeft":"4px solid var(--accent)","padding":"16px 24px","borderRadius":"0 8px 8px 0"}}>
-          🔌 <strong>1. 有 Plugin / 插件市场的工具（如 Cursor, Workbuddy）：</strong><br />
+          <svg style={{display:"inline",verticalAlign:"middle",marginRight:"4px"}} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v6m0 8v6M4.93 4.93l4.24 4.24m5.66 5.66l4.24 4.24M2 12h6m8 0h6M4.93 19.07l4.24-4.24m5.66-5.66l4.24-4.24"/></svg> <strong>1. 有 Plugin / 插件市场的工具（如 Cursor, Workbuddy）：</strong><br />
           直接在插件市场中搜索 <strong>「Zion Plugin」</strong> 一键添加，或直接复制粘贴 Plugin 镜像/Git 仓库地址进行快捷安装。
         </div>
         <div style={{"background":"rgba(92,77,244,0.04)","borderLeft":"4px solid var(--m-lav)","padding":"16px 24px","borderRadius":"0 8px 8px 0"}}>
-          💬 <strong>2. 纯对话式 / 命令行工具（如 Claude Code, Codex, Kimi）：</strong><br />
+          <svg style={{display:"inline",verticalAlign:"middle",marginRight:"4px"}} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> <strong>2. 纯对话式 / 命令行工具（如 Codex, Kimi）：</strong><br />
           无需打开任何面板，直接在对话框中发送自然语言命令进行安装：<br />
           <code style={{"fontFamily":"var(--font-mono)","fontSize":"14px","background":"rgba(0,0,0,0.06)","padding":"4px 8px","borderRadius":"4px","display":"inline-block","marginTop":"6px","color":"var(--black)","fontWeight":"bold"}}>“安装 Zion Plugin，Git 地址是 https://github.com/functorz-tech/zion-nocode-plugin”</code>
         </div>
@@ -919,7 +960,7 @@ export function Slide_s20() {
     <div className="signature">✦ @functorz.com</div>
     <div className="divider-num"><div className="big">03</div></div>
     <div className="divider-body">
-      <div className="divider-en">SECTION 03 · DEVELOPMENT FLOW</div>
+      <div className="divider-en">第三部分</div>
       <div className="divider-zh">让 <span className="accent">AI 编写</span> 前端代码<br />与接口调用</div>
       <div className="divider-tagline">首发 Prompt 极简启动，三类典型场景极速迭代</div>
     </div>
@@ -932,7 +973,7 @@ export function Slide_s21() {
 <section className="slide" id="s21" data-accent="spark">
     <div className="signature">✦ @functorz.com</div>
     <div className="slide-head">
-      <div className="kicker"><span className="pill">3.1</span><span>FIRST PROMPT</span></div>
+      <div className="kicker"><span className="pill">3.1</span><span>首发指令</span></div>
     </div>
     <h2 style={{"fontSize":"32px","marginBottom":"12px"}}>首发 <span className="accent">全栈启动指令</span>（Prompt 模板）</h2>
     <div style={{"marginTop":"10px","display":"flex","flexDirection":"column","gap":"18px","flex":"1","justifyContent":"center"}}>
@@ -942,11 +983,11 @@ export function Slide_s21() {
       <pre className="code" style={{"fontSize":"16px","lineHeight":"1.6","margin":"0","padding":"24px 28px","whiteSpace":"pre-wrap","wordBreak":"break-all"}}>通过 Zion Plugin，开发一个 AI饮食助手网站，前端使用 React 框架，通过 Vite 构建前端项目，BaaS 使用 Zion，所有接口真实可用，设计风格选择 wabi-sabi 风格，在 Zion 平台创建一个新项目。
 我的需求是：用户需要通过用户名和密码注册登录后进入网站内，支持用户上传餐食图片并调用 AI Agent 分析餐食卡路里并输出结果，用户可以保存结果至历史记录内，并支持修改、删除历史记录。
 
-💡 开发策略：
+开发策略：
 1. 请先在 Zion 平台自动创建新项目，通过 Zion Plugin 全自动配置好底层的数据库表结构、外键关联、AI Agent 智能体等全部后端资源。
 2. 待后端配置任务完全结清、接口全部真实打通后，再全自动编写、生成前端 React 页面并进行无缝联调。</pre>
       <div style={{"fontSize":"17px","color":"var(--accent-deep)","fontWeight":"bold","display":"flex","alignItems":"center","gap":"10px","background":"rgba(21,152,255,0.05)","borderLeft":"4px solid var(--accent)","padding":"12px 18px","borderRadius":"0 6px 6px 0","lineHeight":"1.5"}}>
-        <span>⚠️ 避坑提示：</span> 从实际运行来看，AI 编程助手容易在该步骤中偷懒（瞎编假数据模拟接口）。所以必须强制命令它分步开发：先走完 Zion 所有的后端自动化配置，再开发前端 UI 联调！
+        <span><svg style={{display:"inline",verticalAlign:"middle",marginRight:"4px"}} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg> 避坑提示：</span> 从实际运行来看，AI 编程助手容易在该步骤中偷懒（瞎编假数据模拟接口）。所以必须强制命令它分步开发：先走完 Zion 所有的后端自动化配置，再开发前端 UI 联调！
       </div>
     </div>
   </section>
@@ -958,91 +999,83 @@ export function Slide_s22() {
 <section className="slide" id="s22" data-accent="spark">
     <div className="signature">✦ @functorz.com</div>
     <div className="slide-head">
-      <div className="kicker"><span className="pill">3.2</span><span>SCENARIOS</span></div>
+      <div className="kicker"><span className="pill">3.2</span><span>典型场景</span></div>
     </div>
     <h2 style={{"fontSize":"32px","marginBottom":"12px"}}>三类 <span className="accent">典型开发场景</span> 极速指令</h2>
     
     <ScenarioCards />
-
-    <div style={{"fontSize":"15px","color":"var(--accent-deep)","fontWeight":"bold","display":"flex","alignItems":"center","gap":"10px","background":"rgba(21,152,255,0.05)","borderLeft":"4px solid var(--accent)","padding":"12px 18px","borderRadius":"0 6px 6px 0","lineHeight":"1.6","marginTop":"20px"}}>
-      <span>💡 远不止这三类场景：</span>
-      <span style={{"fontWeight":"500","color":"rgba(0,0,0,0.8)"}}>遇到报错时，AI 还能<b>主动查看服务端日志（Logs）自助定位与 Debug</b>；也能一句话<b>配置 RBAC + ABAC 角色权限</b>，精细控制接口与数据访问。</span>
-    </div>
   </section>
   );
 }
 
-export function Slide_s23() {
-  return (
-<section className="slide divider-slide no-pad" id="s23" data-accent="hack">
-    <div className="signature">✦ @functorz.com</div>
-    <div className="divider-num"><div className="big">04</div></div>
-    <div className="divider-body">
-      <div className="divider-en">SECTION 04 · UI BEAUTIFICATION</div>
-      <div className="divider-zh"><strong>前端 UI</strong> 极速美化</div>
-      <div className="divider-tagline">云端素材与切图上传、多媒体资源引用与开源高水准 UI 组件库极速套用</div>
-    </div>
-  </section>
-  );
-}
+export function Slide_s22_more() {
+  const lanes = [
+    [
+      '接入支付宝支付',
+      '接入微信支付',
+      '写支付回调',
+      '配置 Webhook',
+      '短信 / 邮件通知',
+    ],
+    [
+      '数据库触发器',
+      '定时任务 Cron',
+      '查看服务端 Logs',
+      '自助定位 Debug',
+      '飞书 / 钉钉推送',
+    ],
+    [
+      'RBAC 角色权限',
+      'ABAC 精细权限',
+      '接口访问控制',
+      '行级数据权限',
+      'OSS 文件上传',
+    ],
+  ];
 
-export function Slide_s25_2() {
   return (
-<section className="slide" id="s25_2" data-accent="hack">
-    <div className="signature">✦ @functorz.com</div>
-    <div className="slide-head">
-      <div className="kicker"><span className="pill">4.1</span><span>UI BEAUTIFICATION</span></div>
-    </div>
-    <h2 style={{"fontSize":"32px","marginBottom":"10px"}}>前端 UI <span className="accent">极速美化</span> 最佳实践</h2>
-    <div style={{"display":"grid","gridTemplateColumns":"1fr 1.1fr","gap":"32px","flex":"1","alignContent":"center","marginTop":"15px","width":"100%"}}>
-      {/*  Left: How to upload icons/assets  */}
-      <div className="card tinted" style={{"padding":"28px 24px","borderRadius":"12px","display":"flex","flexDirection":"column","justifyContent":"center","height":"320px"}}>
-        <h4 style={{"fontSize":"20px","color":"var(--accent-deep)","marginBottom":"10px","fontWeight":"700"}}>如何上传与使用图标素材？</h4>
-        <div style={{"fontSize":"13.5px","color":"rgba(0,0,0,0.75)","lineHeight":"1.6","display":"grid","gap":"6px"}}>
-          <div>1. <strong>建资源表</strong>：在 Zion 中创建「媒体资源表」，设计 <code>type/tag</code> 文本字段与图片字段。</div>
-          <div>2. <strong>云端上传</strong>：直接在 Zion 数据库管理后台可视化上传你的各种 logo、图标和切图素材。</div>
-          <div>3. <strong>直接引用</strong>：在 Cursor 聊天框直接告诉 AI：<i>“XX 按钮的图片使用该表里 tag = XX 的图片”</i>。如果你懒得找图标，甚至可以直接命令 Cursor 为你生成符合主题风格的 SVG 图片并直接渲染引用！</div>
+    <section className="slide" id="s22_more" data-accent="spark">
+      <div className="signature">✦ @functorz.com</div>
+      <div className="slide-head" style={{ marginBottom: '12px' }}>
+        <div className="kicker">
+          <span className="pill accent">不止于此</span>
+          <span>更多能力</span>
         </div>
       </div>
-      {/*  Right: Open source UI inspiration libraries  */}
-      <div className="card tinted" style={{"padding":"28px 24px","borderRadius":"12px","display":"flex","flexDirection":"column","justifyContent":"center","height":"320px","borderLeft":"5px solid var(--accent)","borderTop":"0","borderBottom":"0","borderRight":"0"}}>
-        <h4 style={{"fontSize":"20px","color":"var(--accent-deep)","marginBottom":"10px","fontWeight":"700"}}>开源高级 UI 灵感库极速套用</h4>
-        <p style={{"fontSize":"13.5px","color":"rgba(0,0,0,0.7)","lineHeight":"1.5","marginBottom":"10px"}}>
-          复制以下灵感库中提供的 UI Prompt 风格提示词或组件 React 源码，直接喂给 AI 即可实现局部的极速美化与动效套用：
-        </p>
-        <div style={{"display":"grid","gap":"6px","fontSize":"13.5px","color":"rgba(0,0,0,0.85)","fontWeight":"500"}}>
-          <div>• <strong>21st.dev / superdesign.dev</strong>：整体系统视觉与风格提示词一键生成</div>
-          <div>• <strong>designprompts.dev</strong>：局部现代精美 Web UI 模块直接复制套用（新手友好）</div>
-          <div>• <strong>reactbits.dev</strong>：高阶局部酷炫动效与物理动画组件无损插入（老手进阶）</div>
-        </div>
+      <h2 style={{ fontSize: '34px', fontWeight: 800, marginBottom: '8px', lineHeight: 1.25 }}>
+        远不止这三类场景 —— <span className="accent">这些也能交给 AI</span>
+      </h2>
+      <p className="muted" style={{ fontSize: '16px', marginBottom: '28px' }}>
+        支付、回调、触发器、定时任务、日志排查、权限……在 Zion Plugin 里照样能配。
+      </p>
+
+      <div className="danmaku" aria-hidden="true">
+        {lanes.map((lane, i) => (
+          <div key={i} className={`danmaku-lane lane-${i}`}>
+            <div className="danmaku-track">
+              {[...lane, ...lane].map((t, j) => (
+                <span key={`${i}-${j}`} className="danmaku-tag">{t}</span>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
-  </section>
+    </section>
   );
 }
 
 export function Slide_s26() {
   return (
-<section className="slide" id="s26" data-accent="core">
+<section className="slide cover closing no-pad" id="s26" data-accent="core">
     <div className="signature">✦ @functorz.com</div>
-    <div style={{"display":"grid","gridTemplateColumns":"1.2fr 1fr","gap":"48px","flex":"1","alignContent":"center","alignItems":"center","width":"100%"}}>
-      {/*  Left Column  */}
-      <div style={{"display":"flex","flexDirection":"column","justifyContent":"center","alignItems":"flex-start"}}>
-        <h1 style={{"fontSize":"56px","marginBottom":"20px","lineHeight":"1.2"}}>极速打造你的<br /><span className="accent">爆款 AI 产品！</span></h1>
-        <div style={{"fontSize":"15px","color":"var(--accent-deep)","fontWeight":"600","background":"rgba(21,152,255,0.05)","border":"1px dashed var(--accent)","borderRadius":"6px","padding":"12px 18px","marginBottom":"28px","width":"100%","maxWidth":"540px"}}>
-          获取 Zion 专业版资源，请联系官方人员获取兑换码
-        </div>
-        <div>
-          <a className="btn-link sm" href="https://functorz.com" target="_blank" rel="noopener">functorz.com ➔</a>
-        </div>
-      </div>
-      {/*  Right Column (QR Code)  */}
-      <div style={{"display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center","width":"100%"}}>
-        <div style={{"background":"var(--white)","borderRadius":"12px","padding":"16px","boxShadow":"0 16px 48px rgba(0,0,0,0.15)","border":"1px solid rgba(0,0,0,0.06)","textAlign":"center"}}>
-          <img src="https://fz-zion.oss-cn-shanghai.aliyuncs.com/project/2000000000600557/images/j1ec9B0n40Nv0sgRkdrQEA%3D%3D.png" alt="交流群二维码" style={{"width":"320px","height":"420px","objectFit":"contain","borderRadius":"6px","marginBottom":"12px"}} />
-          <div style={{"fontSize":"16px","fontWeight":"700","color":"var(--accent-deep)"}}>扫码进群交流</div>
-        </div>
-      </div>
+    <div className="grid-bg"></div>
+    <div className="corner-mark"></div>
+    <div className="corner-mark-bl"></div>
+    <div className="closing-body">
+      <p className="closing-lead">Talk is cheap.</p>
+      <h1 className="closing-title">
+        Show me your <span className="accent">Zion Plugin</span>
+      </h1>
     </div>
   </section>
   );
@@ -1062,15 +1095,14 @@ export const SLIDES = [
   { id: "s11", Comp: Slide_s11 },
   { id: "s03", Comp: Slide_s03 },
   { id: "s03_compat", Comp: Slide_s03_compat },
-  { id: "s05", Comp: Slide_s05 },
-  { id: "s05_2", Comp: Slide_s05_2 },
+  { id: "s03_alt", Comp: Slide_s03_alt },
+  // s05, s05_2 removed
   { id: "s12", Comp: Slide_s12 },
   { id: "s13", Comp: Slide_s13 },
   { id: "s16", Comp: Slide_s16 },
   { id: "s20", Comp: Slide_s20 },
   { id: "s21", Comp: Slide_s21 },
   { id: "s22", Comp: Slide_s22 },
-  { id: "s23", Comp: Slide_s23 },
-  { id: "s25_2", Comp: Slide_s25_2 },
+  { id: "s22_more", Comp: Slide_s22_more },
   { id: "s26", Comp: Slide_s26 },
 ];

@@ -29,7 +29,7 @@ const STEPS = [
 ];
 
 const AI_REPLY =
-  '✅ 后端已全部配置完成并上线：1 张表、1 个 Agent、1 个行为流，GraphQL API 就绪——0 行后端代码。';
+  '后端已全部配置完成并上线：1 张表、1 个 Agent、1 个行为流，GraphQL API 就绪——0 行后端代码。';
 
 const SYSTEM_PROMPT =
   '你是一位专业又幽默的营养师『卡路里分析官』。用户会给你一段对一餐食物的描述；你的任务：1) 拆出每种食物并估算卡路里（kcal）；2) 汇总总卡路里；3) 给出一句不超过40字、轻松幽默的饮食或运动建议。必须严格按照结构化输出格式返回。若用户附上餐食照片，以照片为主、文字为辅。';
@@ -50,13 +50,14 @@ const JSON_LINES = [
   '  "advice": string',
   '}',
 ];
-const FLOW_NODES = ['输入', '🤖 运行 AI', '⬇ 写入数据库', '📨 飞书通知 API', '输出'];
+const FLOW_NODES = ['输入', '⊛ 运行 AI', '↓ 写入数据库', '⊳ 飞书通知 API', '输出'];
 
 export default function BuildReplaySlide() {
   const sectionRef = useRef(null);
   const timersRef = useRef([]);
   const playingRef = useRef(false);
   const visibleRef = useRef(false);
+  const agentScrollRef = useRef(null);
   const [phase, setPhase] = useState(0);
   const [promptLen, setPromptLen] = useState(0);
 
@@ -132,6 +133,13 @@ export default function BuildReplaySlide() {
     return () => clearInterval(timer);
   }, [promptStarted]);
 
+  // 打字 / JSON 展开时自动滚到底，保证 food_name 等字段可见
+  useEffect(() => {
+    const el = agentScrollRef.current;
+    if (!el) return;
+    el.scrollTop = el.scrollHeight;
+  }, [promptLen, phase]);
+
   const stepState = (i) => {
     if (phase >= 2 * i + 2) return 'done';
     if (phase >= 2 * i + 1) return 'active';
@@ -163,8 +171,8 @@ export default function BuildReplaySlide() {
 
       <div className="slide-head" style={{ marginBottom: '12px' }}>
         <div className="kicker">
-          <span className="pill accent">BEHIND THE SCENES</span>
-          <span>ZION PLUGIN BUILD REPLAY</span>
+          <span className="pill accent">幕后</span>
+          <span>Zion Plugin 构建回放</span>
         </div>
       </div>
       <h2 style={{ fontSize: '30px', marginBottom: '4px' }}>
@@ -246,24 +254,24 @@ export default function BuildReplaySlide() {
                 ))}
               </div>
               {promptStarted && (
-                <div className="replay-prompt">
-                  {SYSTEM_PROMPT.slice(0, promptLen)}
-                  {promptLen < SYSTEM_PROMPT.length && <span className="replay-cursor replay-cursor-dark" />}
+                <div className="replay-agent-scroll" ref={agentScrollRef}>
+                  <div className="replay-prompt">
+                    {SYSTEM_PROMPT.slice(0, promptLen)}
+                    {promptLen < SYSTEM_PROMPT.length && <span className="replay-cursor replay-cursor-dark" />}
+                  </div>
+                  <div className="replay-prompt-user">这是我这一餐吃的：{'{meal_description}'}</div>
+                  <div className={`replay-json${phase >= 6 ? ' on' : ''}`}>
+                    {JSON_LINES.map((l, i) => (
+                      <div key={i} className="replay-json-line" style={{ animationDelay: `${1700 + i * 140}ms` }}>{l}</div>
+                    ))}
+                  </div>
                 </div>
               )}
-              {promptStarted && (
-                <div className="replay-prompt-user">这是我这一餐吃的：{'{meal_description}'}</div>
-              )}
-              <div className={`replay-json${phase >= 6 ? ' on' : ''}`}>
-                {JSON_LINES.map((l, i) => (
-                  <div key={i} className="replay-json-line" style={{ animationDelay: `${1700 + i * 140}ms` }}>{l}</div>
-                ))}
-              </div>
             </div>
 
             {/* 行为流卡片（竖排） */}
             <div className={`replay-flow replay-pop${phase >= 8 ? ' on' : ''}`}>
-              <div className="replay-flow-name">⚡ 行为流 · 分析餐食并入库</div>
+              <div className="replay-flow-name"><svg style={{display:"inline",verticalAlign:"middle",marginRight:"4px"}} width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> 行为流 · 分析餐食并入库</div>
               <div className={`replay-flow-nodes${phase >= 10 ? ' on' : ''}`}>
                 {FLOW_NODES.map((n, i) => (
                   <Fragment key={n}>
