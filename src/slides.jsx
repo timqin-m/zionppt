@@ -74,31 +74,6 @@ export function Slide_s01() {
             <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.45)', fontFamily: 'var(--font-mono)' }}>
               zion.howtone.cn
             </div>
-            <div className="mobile-tap-hint" style={{ 
-              fontSize: '11px', 
-              color: 'rgba(255, 255, 255, 0.6)', 
-              marginTop: '4px',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '4px'
-            }}>
-              <span><svg style={{display:"inline",verticalAlign:"middle",marginRight:"4px"}} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg> 手机点击直达 · 扫码访问</span>
-            </div>
-          </div>
-          <div style={{ 
-            background: '#fff', 
-            padding: '6px', 
-            borderRadius: '8px', 
-            display: 'flex', 
-            alignItems: 'center', 
-            justifyContent: 'center',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.25)'
-          }}>
-            <img 
-              src="https://fz-zion.oss-cn-shanghai.aliyuncs.com/project/2000000000600557/images/7D26c9QUARv5WPcHjZI7XA%3D%3D.png" 
-              alt="https://zion.howtone.cn 二维码" 
-              style={{ width: '80px', height: '80px', display: 'block', borderRadius: '4px' }} 
-            />
           </div>
         </a>
       </div>
@@ -1076,6 +1051,40 @@ export function Slide_s26() {
       <h1 className="closing-title">
         Show me your <span className="accent">Zion Plugin</span>
       </h1>
+      <div style={{ display: 'flex', gap: '48px', marginTop: '48px', alignItems: 'flex-end' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
+          <div style={{
+            background: '#fff',
+            padding: '10px',
+            borderRadius: '12px',
+            boxShadow: '0 8px 24px rgba(0,0,0,0.3)',
+            display: 'flex'
+          }}>
+            <img
+              src="https://fz-zion.oss-cn-shanghai.aliyuncs.com/project/2000000000600557/images/j9s_3beal16E4gM3EvO18w%3D%3D.png"
+              alt="指南文档二维码"
+              style={{ width: '170px', height: '170px', display: 'block', borderRadius: '4px' }}
+            />
+          </div>
+          <span style={{ fontSize: '15px', color: 'rgba(255,255,255,0.55)' }}>扫码查看指南文档</span>
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
+          <div style={{
+            background: '#fff',
+            padding: '8px',
+            borderRadius: '12px',
+            boxShadow: '0 8px 24px rgba(0,0,0,0.3)',
+            display: 'flex'
+          }}>
+            <img
+              src="https://fz-zion.oss-cn-shanghai.aliyuncs.com/project/2000000000600557/images/ieDSstpwKCHqaPbfxArTIQ%3D%3D.jpeg"
+              alt="覃貌Tim 微信二维码"
+              style={{ height: '190px', width: 'auto', display: 'block', borderRadius: '6px' }}
+            />
+          </div>
+          <span style={{ fontSize: '15px', color: 'rgba(255,255,255,0.55)' }}>扫码加我微信</span>
+        </div>
+      </div>
     </div>
   </section>
   );
