@@ -169,17 +169,17 @@ export function Slide_s01_cases_transition() {
         </div>
         <div className="cases-transition-grid">
           <div className="cases-transition-card">
-            <img src="/assets/case-xiaokace.webp" alt="小卡册" />
+            <img src="https://fz-zion-static.functorz.com/202608252359/16f97953b9ee28cc75b859414974708d/project/2000000000600557/images/aDUfJneASe_6poQIPQVzXw==.webp" alt="小卡册" />
             <span>小卡册</span>
             <p>700万SKU的球星卡收集爱好者之家</p>
           </div>
           <div className="cases-transition-card">
-            <img src="/assets/case-goo.webp" alt="GOO 活动" />
+            <img src="https://fz-zion-static.functorz.com/202608252359/ead5b2973a482f43de1f68d4d473719a/project/2000000000600557/images/vKiNVhs9bLKPKpAF3aLctw==.webp" alt="GOO 活动" />
             <span>GOO 活动</span>
             <p>香港地区最大的港漂活动平台</p>
           </div>
           <div className="cases-transition-card cases-transition-card--qr">
-            <img src="/assets/more-cases-qr.png" alt="更多手搓案例二维码" />
+            <img src="https://fz-zion-static.functorz.com/202608252359/f22b43386be56bbdcbaa8218df4dfefc/project/2000000000600557/images/w11qd3y--0iP1ybfF6ZOhQ==.png" alt="更多手搓案例二维码" />
             <span>更多案例</span>
             <p>扫码看更多手搓案例</p>
           </div>
@@ -423,13 +423,13 @@ export function Slide_s10_5() {
         </div>
         {/*  QR Code in Bottom Left  */}
         <div style={{"display":"flex","flexDirection":"column","alignItems":"center","marginTop":"16px"}}>
-          <img src="/assets/case-shikilab-qr.png" style={{"width":"120px","height":"120px","objectFit":"contain","borderRadius":"8px","boxShadow":"0 4px 16px rgba(0,0,0,0.06)","background":"var(--white)","border":"1px solid rgba(0,0,0,0.04)","marginBottom":"8px"}} />
+          <img src="https://fz-zion-static.functorz.com/202608252359/2f9236bb6008e4a133cd75689d0a178f/project/2000000000600557/images/prQ8P4vlanp1AP3rAJTzGQ==.png" style={{"width":"120px","height":"120px","objectFit":"contain","borderRadius":"8px","boxShadow":"0 4px 16px rgba(0,0,0,0.06)","background":"var(--white)","border":"1px solid rgba(0,0,0,0.04)","marginBottom":"8px"}} />
           <div style={{"fontSize":"13.5px","fontWeight":"700","color":"var(--accent-deep)","textAlign":"center","width":"120px","lineHeight":"1.4"}}>扫码体验网站</div>
         </div>
       </div>
       {/*  Right Visual  */}
       <div style={{"display":"flex","justifyContent":"flex-end","width":"100%"}}>
-        <img src="/assets/case-shikilab.jpg" style={{"width":"540px","height":"360px","objectFit":"cover","borderRadius":"12px","boxShadow":"0 16px 48px rgba(0,0,0,0.12)","background":"var(--white)","border":"1px solid rgba(0,0,0,0.06)"}} alt="shikilab.cn" />
+        <img src="https://fz-zion-static.functorz.com/202608252359/eece1aaa0a301d56446f6895f71ef472/project/2000000000600557/images/UuiDwLxIJIXMxKcoSBwCrQ==.jpeg" style={{"width":"540px","height":"360px","objectFit":"cover","borderRadius":"12px","boxShadow":"0 16px 48px rgba(0,0,0,0.12)","background":"var(--white)","border":"1px solid rgba(0,0,0,0.06)"}} alt="shikilab.cn" />
       </div>
     </div>
   </section>

@@ -1841,7 +1841,7 @@ body.present .present-hud{display:block}
   right: 72px;
   width: 112px;
   height: 42px;
-  background: url('/assets/zion-logo-black.png') center / contain no-repeat;
+  background: url('https://fz-zion-static.functorz.com/202608252359/32b6bf8f55f328a0222800917d154347/project/2000000000600557/images/cBtvXq61RNwzuLaQfKbqgw==.png') center / contain no-repeat;
   opacity: .9;
   pointer-events: none;
   z-index: 40;
@@ -1850,7 +1850,7 @@ body.present .present-hud{display:block}
 .slide.closing::after,
 .slide.divider-slide::after,
 .slide[data-accent="hack"]::after {
-  background-image: url('/assets/zion-logo-white.png');
+  background-image: url('https://fz-zion-static.functorz.com/202608252359/6d2ec9b020bca7fbdff49423102ac25c/project/2000000000600557/images/5OJ-bCgptPUUJTivGyuftw==.png');
 }
 
 @media (max-width: 768px) {
