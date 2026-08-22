@@ -8,11 +8,11 @@ import BuildReplaySlide from './BuildReplaySlide.jsx';
 const SLIDE_W = 1280;
 const SLIDE_H = 720;
 
-// 在原 s11（核心优势架构图）之后依次插入：AI 自动构建回放 → LIVE DEMO
+// 在最后一个案例页（s10_5）之后依次插入：AI 自动构建回放 → LIVE DEMO
 const DECK = [];
 for (const s of SLIDES) {
   DECK.push(s);
-  if (s.id === 's11') {
+  if (s.id === 's10_5') {
     DECK.push({ id: 'build-replay', Comp: BuildReplaySlide });
     DECK.push({ id: 'demo1', Comp: DemoSlide1 });
   }

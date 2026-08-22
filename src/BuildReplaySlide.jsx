@@ -169,18 +169,9 @@ export default function BuildReplaySlide() {
         </div>
       </div>
 
-      <div className="slide-head" style={{ marginBottom: '12px' }}>
-        <div className="kicker">
-          <span className="pill accent">幕后</span>
-          <span>Zion Plugin 构建回放</span>
-        </div>
-      </div>
-      <h2 style={{ fontSize: '30px', marginBottom: '4px' }}>
-        这个后端，是 <span className="accent">AI 用 Zion Plugin 自动搭的</span>
+      <h2 style={{ fontSize: '34px', marginBottom: '16px' }}>
+        如果使用了 <span className="accent">Zion Plugin</span>，跟 AI 如何交流呢？
       </h2>
-      <div className="meta" style={{ marginBottom: '14px', fontSize: '12.5px' }}>
-        本演示项目 hackathon-live-demo 的真实构建过程回放 · 0 行后端代码
-      </div>
 
       <div className="replay-grid">
         {/* 左：Codex 式 chat */}

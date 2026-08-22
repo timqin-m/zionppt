@@ -35,7 +35,7 @@ function LiveBadge() {
   return (
     <div className="live-badge">
       <span className="live-dot" />
-      现场 · 真实后端 · 非 Mock
+      现场演示
     </div>
   );
 }
@@ -259,18 +259,7 @@ export function DemoSlide1({ active }) {
   return (
     <section className="slide" id="demo1" data-accent="hack">
       <div className="signature">✦ @functorz.com</div>
-      <LiveBadge />
-      <div className="slide-head" style={{ marginBottom: '8px' }}>
-        <div className="kicker">
-          <span className="pill accent">现场演示</span>
-          <span>AI Agent · 行为流 · 数据库</span>
-        </div>
-      </div>
-      <h2 style={{ fontSize: '26px', marginBottom: '10px' }}>
-        现场实机演示：AI Agent + 行为流 + 数据库，<span className="accent">全是真的</span>
-      </h2>
-
-      <div className="grid-2" style={{ flex: 1, minHeight: 0, gap: '20px' }}>
+      <div className="grid-2" style={{ flex: 1, minHeight: 0, gap: '20px', marginTop: '48px' }}>
         {/* 左：行为流调用面板 */}
         <div className="card demo-panel">
           <div className="label"><span className="dot" />云端行为流：分析餐食并入库</div>
