@@ -31,14 +31,14 @@ export function Slide_s01() {
     <div className="cover-body">
       <div style={{ transform: 'translateY(72px)' }}>
         <h1><span className="accent">Zion</span></h1>
-        <div className="cover-sub" style={{ fontSize: '32px', fontWeight: '600', color: 'var(--ink)', marginTop: '16px' }}>
+        <div className="cover-sub" style={{ fontSize: '32px', fontWeight: '600', color: '#fff', marginTop: '16px' }}>
            让没有技术背景的创业者，拥有可控稳定的商业产品开发能力
         </div>
       </div>
       <div className="cover-foot" style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-end', width: '100%', marginBottom: '28px' }}>
         <div>
-          <div style={{"fontSize":"18px","color":"var(--ink)","fontWeight":"500","marginBottom":"6px"}}>Zion 开发者生态 覃貌Tim</div>
-          <div className="meta" style={{"color":"var(--muted)"}}>Powered by functorz.com</div>
+          <div style={{"fontSize":"18px","color":"#fff","fontWeight":"500","marginBottom":"6px"}}>Zion 开发者生态 覃貌Tim</div>
+          <div className="meta" style={{"color":"rgba(255,255,255,.55)"}}>Powered by functorz.com</div>
         </div>
       </div>
     </div>
@@ -94,11 +94,11 @@ export function Slide_s01_about({ active }) {
       </div>
 
       <div style={{ maxWidth: '1080px', margin: '0 auto', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-        <div style={{ fontSize: '46px', fontWeight: '800', color: 'var(--ink)', letterSpacing: '-0.01em', lineHeight: '1.3' }}>
+        <div style={{ fontSize: '46px', fontWeight: '800', color: '#fff', letterSpacing: '-0.01em', lineHeight: '1.3' }}>
           在过去的 6 年里，我们围绕着这个初衷
         </div>
 
-        <h1 className="about-title-anim" style={{ fontSize: '46px', fontWeight: '800', lineHeight: '1.3', letterSpacing: '-0.01em', margin: '0 0 28px', color: 'var(--ink)' }}>
+        <h1 className="about-title-anim" style={{ fontSize: '46px', fontWeight: '800', lineHeight: '1.3', letterSpacing: '-0.01em', margin: '0 0 28px', color: '#fff' }}>
           让这些非技术型创业者，通过 Zion 画布编辑器<br />
           <span className="accent">自主开发并交付微信小程序、Web 应用</span>
         </h1>
