@@ -258,7 +258,6 @@ export function DemoSlide1({ active }) {
 
   return (
     <section className="slide" id="demo1" data-accent="core">
-      <div className="signature">✦ @functorz.com</div>
       <div className="grid-2" style={{ flex: 1, minHeight: 0, gap: '20px', marginTop: '48px' }}>
         {/* 左：行为流调用面板 */}
         <div className="card demo-panel">
