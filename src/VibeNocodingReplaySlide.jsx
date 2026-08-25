@@ -37,13 +37,24 @@ const TABLE_FIELDS = [
   ['image', 'IMAGE'],
 ];
 
+const ORDER_FIELDS = [
+  ['item_id', '→ menu_items'],
+  ['qty', 'INTEGER'],
+  ['status', 'ENUM'],
+];
+
 const CARDS = [
   ['🧋', '燕麦拿铁', '¥18'],
   ['✨', '冷萃黑咖', '¥15'],
   ['🥐', '芝士可颂', '¥22'],
 ];
 
-const FLOW_NODES = ['🛒 点击下单', '⚙ 运行 AI', '💾 写入订单', '🔔 飞书通知'];
+const FLOW_NODES = [
+  ['🛒', '点击下单'],
+  ['⚙', '运行 AI'],
+  ['💾', '写入订单'],
+  ['🔔', '飞书通知'],
+];
 
 export default function VibeNocodingReplaySlide() {
   const sectionRef = useRef(null);
@@ -210,17 +221,39 @@ export default function VibeNocodingReplaySlide() {
                 {/* 面板① 数据模型：数据库设计 */}
                 <div className={`zcaf-panel${phase >= 2 && phase < 4 ? ' on' : ''}`}>
                   <div className="zcaf-panel-head">数据模型 · 数据库设计</div>
-                  <div className="zcaf-table">
-                    <div className="zcaf-table-name">
-                      menu_items <em>点单商品表</em>
-                    </div>
-                    {TABLE_FIELDS.map(([f, t]) => (
-                      <div key={f} className="zcaf-table-field">
-                        <b>{f}</b>
-                        <span className="zcaf-table-type">{t}</span>
-                        <span className="zcaf-table-key">主键·索引</span>
+                  <div className="zcaf-model">
+                    <div className="zcaf-table">
+                      <div className="zcaf-table-name">
+                        menu_items <em>点单商品表</em>
+                        <span className="zcaf-table-tag">主表</span>
                       </div>
-                    ))}
+                      {TABLE_FIELDS.map(([f, t]) => (
+                        <div key={f} className="zcaf-table-field">
+                          <span className="zcaf-table-f">{f}</span>
+                          <span className="zcaf-table-type">{t}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="zcaf-model-link">
+                      <span className="zcaf-model-line" />
+                      <span className="zcaf-model-card">
+                        <em>1 ── N</em>
+                        <small>item_id → menu_items.id</small>
+                      </span>
+                    </div>
+                    <div className="zcaf-table zcaf-table--orders">
+                      <div className="zcaf-table-name">
+                        orders <em>订单表</em>
+                        <span className="zcaf-table-tag zcaf-table-tag--flow">行为流写入</span>
+                      </div>
+                      {ORDER_FIELDS.map(([f, t]) => (
+                        <div key={f} className="zcaf-table-field">
+                          <span className="zcaf-table-f">{f}</span>
+                          <span className="zcaf-table-type">{t}</span>
+                        </div>
+                      ))}
+                      <div className="zcaf-table-note">由行为流「提交订单」自动写入</div>
+                    </div>
                   </div>
                   <div className="zcaf-flow-note">字段即接口 · 保存后自动生成 GraphQL</div>
                 </div>
@@ -229,10 +262,10 @@ export default function VibeNocodingReplaySlide() {
                 <div className={`zcaf-panel${phase >= 4 && phase < 6 ? ' on' : ''}`}>
                   <div className="zcaf-panel-head">行为流 · 提交订单</div>
                   <div className="zcaf-flow">
-                    {FLOW_NODES.map((n, i) => (
-                      <div key={n} className="zcaf-flow-node" style={{ animationDelay: `${250 + i * 200}ms` }}>
-                        <span className="zcaf-flow-dot">{n.slice(0, 1)}</span>
-                        <span>{n.slice(2)}</span>
+                    {FLOW_NODES.map(([ic, label], i) => (
+                      <div key={label} className="zcaf-flow-node" style={{ animationDelay: `${250 + i * 200}ms` }}>
+                        <span className="zcaf-flow-dot">{ic}</span>
+                        <span>{label}</span>
                       </div>
                     ))}
                   </div>
@@ -268,39 +301,54 @@ export default function VibeNocodingReplaySlide() {
                   <span className="vrc-phone-time">9:41</span>
                   <span className="vrc-phone-icons"><i /><i /><i /></span>
                 </div>
+                <div className="vrc-phone-scroll">
+                  <div className={`vrc-app-nav vrc-block${phase >= 8 ? ' on' : ''}`}>
+                    <span className="vrc-app-logo">☕</span>
+                    <b>拾光咖啡</b>
+                    <span className="vrc-app-nav-btn">整杯·点单</span>
+                  </div>
 
-                <div className={`vrc-app-nav vrc-block${phase >= 8 ? ' on' : ''}`}>
-                  <span className="vrc-app-logo">☕</span>
-                  <b>拾光咖啡</b>
-                  <span className="vrc-app-nav-btn">整杯·点单</span>
-                </div>
+                  <div className={`vrc-app-banner vrc-block${phase >= 8 ? ' on' : ''}`}>
+                    <b>一杯咖啡的时间</b>
+                    <span>主视觉 · 自动生成</span>
+                  </div>
 
-                <div className={`vrc-app-banner vrc-block${phase >= 8 ? ' on' : ''}`}>
-                  <b>一杯咖啡的时间</b>
-                  <span>主视觉 · 自动生成</span>
-                </div>
+                  <div className={`vrc-app-list vrc-block${phase >= 2 ? ' on' : ''}`}>
+                    <div className={`vrc-app-bound${phase >= 10 ? ' on' : ''}`}>◈ 数据来自 menu_items 表 · name/price/image 字段已绑定</div>
+                    {CARDS.map(([ic, name, price], i) => (
+                      <div key={name} className="vrc-app-item" style={{ transitionDelay: `${200 + i * 260}ms` }}>
+                        <span className="vrc-app-thumb">{ic}</span>
+                        <span className="vrc-app-info">
+                          <b>{name}</b>
+                          <em className="vrc-app-field"><b>{name}</b> · {price} · 已绑定</em>
+                        </span>
+                        <span className="vrc-app-price">{price}</span>
+                        <span className="vrc-app-add">+</span>
+                      </div>
+                    ))}
+                  </div>
 
-                <div className={`vrc-app-list vrc-block${phase >= 8 ? ' on' : ''}`}>
-                  {CARDS.map(([ic, name, price]) => (
-                    <div key={name} className="vrc-app-item">
-                      <span className="vrc-app-thumb">{ic}</span>
-                      <span className="vrc-app-info">
-                        <b>{name}</b>
-                        <em>中杯 · 冰/热可选</em>
-                      </span>
-                      <span className="vrc-app-price">{price}</span>
-                      <span className="vrc-app-add">+</span>
-                    </div>
-                  ))}
-                </div>
+                  <div className={`vrc-ai-recommend vrc-block${phase >= 6 ? ' on' : ''}`}>
+                    <span className="vrc-ai-recommend-ic">✦</span>
+                    <span className="vrc-ai-recommend-text">
+                      <b>咖啡推荐官：</b>燕麦拿铁 + 芝士可颂，423 kcal 舒适搭配
+                    </span>
+                  </div>
 
-                <div className={`vrc-app-foot vrc-block${phase >= 10 ? ' on' : ''}`}>
-                  <span className="vrc-app-total">合计 <b>¥55</b></span>
-                  <button type="button" className="vrc-app-btn">去下单 · 写入订单</button>
+                  <div className={`vrc-app-foot vrc-block${phase >= 4 ? ' on' : ''}`}>
+                    <span className="vrc-app-total">合计 <b>¥55</b></span>
+                    <button type="button" className="vrc-app-btn">去下单 · 运行行为流</button>
+                  </div>
+
+                  <div className="vrc-app-tabbar">
+                    <span className="vrc-app-tab on"><i>☕</i>点单</span>
+                    <span className="vrc-app-tab"><i>📋</i>订单</span>
+                    <span className="vrc-app-tab"><i>👤</i>我的</span>
+                  </div>
                 </div>
 
                 <div className={`vrc-app-toast vrc-block${phase >= 12 ? ' on' : ''}`}>
-                  <span>✓</span> 订单已写入 menu_items · 推送成功
+                  <span>✓</span> 行为流执行成功：写库 → 推送
                 </div>
 
                 <span className="vrc-phone-home" />

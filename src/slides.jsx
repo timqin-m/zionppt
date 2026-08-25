@@ -537,5 +537,4 @@ export const SLIDES = [
   { id: "s10_5", Comp: Slide_s10_5 },
   { id: "vibe_nocoding", Comp: Slide_vibe_nocoding },
   { id: "vibe_nocoding_how", Comp: Slide_vibe_nocoding_how },
-  { id: "s26", Comp: Slide_s26 },
 ];
