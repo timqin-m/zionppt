@@ -351,6 +351,13 @@ export default function VibeNocodingReplaySlide() {
                   <span>✓</span> 行为流执行成功：写库 → 推送
                 </div>
 
+                {/* AI 绘制指针：沿 UI 区块描画 */}
+                <div className={`vrc-draw-cursor${phase >= 4 && phase < 12 ? ' show' : ''}`} aria-hidden="true">
+                  <span className="vrc-draw-cursor-glow" />
+                  <svg className="vrc-draw-cursor-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 3l14 8-6.5 1.5L9.5 19 5 3z" fill="#fff" stroke="#1598FF" strokeWidth="1.6" strokeLinejoin="round"/></svg>
+                  <span className="vrc-draw-cursor-spark">✦</span>
+                </div>
+
                 <span className="vrc-phone-home" />
               </div>
             </div>

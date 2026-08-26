@@ -147,7 +147,7 @@ export default function BuildReplaySlide() {
   };
 
   return (
-    <section className="slide" id="build-replay" data-accent="spark" ref={sectionRef}>
+    <section className="slide" id="build-replay" data-accent="core" ref={sectionRef}>
 
       {/* 飞书通知弹窗（行为流出现/触发时右上角弹出） */}
       <div className={`feishu-toast${phase >= 10 ? ' show' : ''}`}>

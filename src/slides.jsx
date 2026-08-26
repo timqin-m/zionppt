@@ -130,9 +130,9 @@ export function Slide_s01_about({ active }) {
 
 export function Slide_s01_vibe() {
   return (
-    <section className="slide vibe-single" id="s01_vibe" data-accent="spark">
+    <section className="slide vibe-single" id="s01_vibe" data-accent="core">
       <h2>
-        进入 Vibe Coding 时代：<span className="accent">让更多人愿意动手做产品了</span>
+        进入 Vibe Coding 时代：<span className="accent">更多人愿意动手做产品了</span>
       </h2>
     </section>
   );
@@ -193,30 +193,66 @@ export function Slide_s01_cases_summary() {
   );
 }
 
-export function Slide_s04() {
+export function Slide_s04({ active }) {
   return (
-<section className="slide" id="s04" data-accent="spark">
-    <h2 className="s04-period-title">
+<section className={`slide ${active ? 'active-slide' : ''}`} id="s04" data-accent="core">
+    <h2 className="s04-period-title s04-anim" style={{ transitionDelay: '0ms' }}>
       <span className="s04-period-num">01</span>
       连后端是什么都不知道的时期
     </h2>
-    <p className="s04-period-sub">
+    <p className="s04-period-sub s04-anim" style={{ transitionDelay: '120ms' }}>
       脑子空空，靠着 AI 硬做——<span className="accent">掉进去的全是这些人踩过的坑</span>
     </p>
       <div className="vibe-progress">
-      <div className="vibe-progress-card">
+      <div className="vibe-progress-card" style={{ transitionDelay: '260ms' }}>
+        <div className="s04-scene" aria-hidden="true">
+          <div className="scn-win">
+            <div className="scn-win-bar"><i /><i /><i /><em>我的产品</em></div>
+            <div className="scn-win-body">
+              <b class="scn-win-title">第一次用 AI 就做出来了！</b>
+              <span className="scn-win-line" />
+              <em className="scn-win-ok">✓ 页面能打开</em>
+            </div>
+          </div>
+        </div>
         <span className="vibe-progress-num">01</span>
         <h3>前端很快能做出来</h3>
         <p>靠 AI，很快就能做出能打开的页面</p>
       </div>
       <span className="vibe-progress-arrow" aria-hidden="true">→</span>
-      <div className="vibe-progress-card">
+      <div className="vibe-progress-card" style={{ transitionDelay: '400ms' }}>
+        <div className="s04-scene" aria-hidden="true">
+          <div className="scn-fake">
+            <div className="scn-fake-code">
+              <em>localStorage.setItem('用户', …)</em>
+            </div>
+            <span className="scn-eq">=</span>
+            <div className="scn-fake-db">
+              <span className="scn-db-orbs"><i /><i /><i /></span>
+              <b>数据库？</b>
+            </div>
+          </div>
+        </div>
         <span className="vibe-progress-num">02</span>
         <h3>误以为「有后端了」</h3>
         <p>有人以为纯 HTML 就是前端，localStorage 就当有了数据库</p>
       </div>
       <span className="vibe-progress-arrow" aria-hidden="true">→</span>
-      <div className="vibe-progress-card vibe-progress-card--bad">
+      <div className="vibe-progress-card vibe-progress-card--bad" style={{ transitionDelay: '540ms' }}>
+        <div className="s04-scene" aria-hidden="true">
+          <div className="scn-box-stage">
+            <div className="scn-blackbox">
+              <span className="scn-blackbox-q">?</span>
+              <span className="scn-blackbox-scan" />
+            </div>
+            <div className="scn-box-labels">
+              <em>数据库</em>
+              <em>接口</em>
+              <em>鉴权</em>
+              <em>Agent</em>
+            </div>
+          </div>
+        </div>
         <span className="vibe-progress-num">03</span>
         <h3>后端仍是黑盒</h3>
         <p>真正的数据库、接口、鉴权、Agent 与复杂业务逻辑，对看不懂的人仍是黑盒</p>
@@ -226,30 +262,70 @@ export function Slide_s04() {
   );
 }
 
-export function Slide_s04_2() {
+export function Slide_s04_2({ active }) {
   return (
-<section className="slide" id="s04_2" data-accent="spark">
-    <h2 className="s04-period-title">
+<section className={`slide ${active ? 'active-slide' : ''}`} id="s04_2" data-accent="core">
+    <h2 className="s04-period-title s04-anim" style={{ transitionDelay: '0ms' }}>
       <span className="s04-period-num">02</span>
       有了一丢丢概念之后
     </h2>
-    <p className="s04-period-sub">
+    <p className="s04-period-sub s04-anim" style={{ transitionDelay: '120ms' }}>
       看得懂一点了，<span className="accent">问题却换了一副面孔</span>
     </p>
       <div className="vibe-pain-grid">
-      <div className="vibe-pain-card">
+      <div className="vibe-pain-card" style={{ transitionDelay: '260ms' }}>
+        <div className="s04-scene" aria-hidden="true">
+          <div className="scn-code">
+            <span className="scn-code-row"><em className="scn-code-kw">function</em> handlePay() {'{ … }'}</span>
+            <span className="scn-code-row scn-code-row--dim"><em className="scn-code-kw">function</em> calcPrice() {'{ … }'}</span>
+            <span className="scn-code-caret" />
+            <span className="scn-code-warn">⚠ 改完发现另一处也坏了</span>
+          </div>
+        </div>
         <div className="vibe-pain-num">01</div>
         <h3>迭代时不敢改</h3>
         <p>想加一个小需求，却担心动到看不见的 <code>function</code>，把原来能跑的逻辑改崩。</p>
         <div className="vibe-pain-foot">越改越小心，产品迭代被拖慢</div>
       </div>
-      <div className="vibe-pain-card">
+      <div className="vibe-pain-card" style={{ transitionDelay: '400ms' }}>
+        <div className="s04-scene" aria-hidden="true">
+          <div className="scn-tangle">
+            <span className="scn-tangle-node">①</span>
+            <span className="scn-tangle-node">②</span>
+            <span className="scn-tangle-node">③</span>
+            <svg className="scn-tangle-svg" viewBox="0 0 120 56" fill="none">
+              <path d="M18 12C40 52 70 4 92 44" strokeDasharray="4 4" />
+              <path d="M18 40C44 10 76 56 104 16" strokeDasharray="4 4" />
+            </svg>
+            <span className="scn-tangle-q">这俩 function 是干嘛的来着？</span>
+          </div>
+        </div>
         <div className="vibe-pain-num">02</div>
         <h3>自己忘了写过什么</h3>
         <p>堆了一堆接口、鉴权、Agent 与业务逻辑，过几天已经记不清每个 function 在干什么。</p>
         <div className="vibe-pain-foot">维护靠猜，排查靠运气</div>
       </div>
-      <div className="vibe-pain-card">
+      <div className="vibe-pain-card" style={{ transitionDelay: '540ms' }}>
+        <div className="s04-scene" aria-hidden="true">
+          <div className="scn-burn">
+            <div className="scn-burn-head">
+              <b>Token 消耗</b>
+              <span className="scn-burn-off">仅剩 5%</span>
+            </div>
+            <div className="scn-burn-bar"><i style={{ width: '5%' }} /></div>
+            <div className="scn-burn-nums">
+              <span className="scn-burn-num">100%</span>
+              <span className="scn-burn-arrow">→</span>
+              <span className="scn-burn-num scn-burn-num--left">5%</span>
+              <span className="scn-flame">🔥</span>
+            </div>
+            <div className="scn-burn-split">
+              <em>猜配置 53%</em>
+              <em>猜联调 34%</em>
+              <em>猜报错 13%</em>
+            </div>
+          </div>
+        </div>
         <div className="vibe-pain-num">03</div>
         <h3>后端开发 Token 狂烧</h3>
         <p>在黑盒里反复让 AI 猜配置、猜联调、猜报错，大量 Token 耗在「看不见的后端」上。</p>
@@ -314,7 +390,7 @@ export function Slide_s02() {
 
 export function Slide_s10_2() {
   return (
-<section className="slide" id="s10_2" data-accent="spark">
+<section className="slide" id="s10_2" data-accent="core">
     <h2 style={{"fontSize":"32px","marginBottom":"8px"}}><span className="accent">Zion</span> 案例展示</h2>
     <div style={{"display":"grid","gridTemplateColumns":"1fr 1.3fr","gap":"48px","flex":"1","alignContent":"center","alignItems":"center","width":"100%"}}>
       {/*  Left Info  */}
@@ -341,7 +417,7 @@ export function Slide_s10_2() {
 
 export function Slide_s10_3() {
   return (
-<section className="slide" id="s10_3" data-accent="spark">
+<section className="slide" id="s10_3" data-accent="core">
     <h2 style={{"fontSize":"32px","marginBottom":"8px"}}><span className="accent">Zion</span> 案例展示</h2>
     <div style={{"display":"grid","gridTemplateColumns":"1fr 1.3fr","gap":"48px","flex":"1","alignContent":"center","alignItems":"center","width":"100%"}}>
       {/*  Left Info  */}
@@ -368,7 +444,7 @@ export function Slide_s10_3() {
 
 export function Slide_s10_4() {
   return (
-<section className="slide" id="s10_4" data-accent="spark">
+<section className="slide" id="s10_4" data-accent="core">
     <h2 style={{"fontSize":"32px","marginBottom":"8px"}}><span className="accent">Zion</span> 案例展示</h2>
     <div style={{"display":"grid","gridTemplateColumns":"1fr 1.3fr","gap":"48px","flex":"1","alignContent":"center","alignItems":"center","width":"100%"}}>
       {/*  Left Info  */}
@@ -395,7 +471,7 @@ export function Slide_s10_4() {
 
 export function Slide_s10_5() {
   return (
-<section className="slide" id="s10_5" data-accent="spark">
+<section className="slide" id="s10_5" data-accent="core">
     <h2 style={{"fontSize":"32px","marginBottom":"8px"}}><span className="accent">Zion</span> 案例展示</h2>
     <div style={{"display":"grid","gridTemplateColumns":"1fr 1.3fr","gap":"48px","flex":"1","alignContent":"center","alignItems":"center","width":"100%"}}>
       {/*  Left Info  */}
@@ -422,7 +498,7 @@ export function Slide_s10_5() {
 
 export function Slide_s05() {
   return (
-<section className="slide" id="s05" data-accent="spark">
+<section className="slide" id="s05" data-accent="core">
     <h2 style={{"fontSize":"32px","marginBottom":"8px"}}><span className="accent">Zion 能给你的</span>：一站式 AI 智能体托管</h2>
     <div style={{"display":"grid","gridTemplateColumns":"1fr 1.15fr","gap":"48px","flex":"1","alignContent":"center","alignItems":"stretch","marginTop":"20px","width":"100%"}}>
       <div style={{"display":"flex","flexDirection":"column","justifyContent":"center","alignItems":"flex-start"}}>
@@ -457,7 +533,7 @@ export function Slide_s05() {
 
 export function Slide_s05_2() {
   return (
-<section className="slide" id="s05_2" data-accent="spark">
+<section className="slide" id="s05_2" data-accent="core">
     <h2 style={{"fontSize":"32px","marginBottom":"8px"}}><span className="accent">Zion 能给你的</span>：免服务器运维与部署</h2>
     <div style={{"display":"grid","gridTemplateColumns":"1fr 1.15fr","gap":"48px","flex":"1","alignContent":"center","alignItems":"center","width":"100%"}}>
       <div style={{"display":"flex","flexDirection":"column","justifyContent":"center","alignItems":"flex-start"}}>
